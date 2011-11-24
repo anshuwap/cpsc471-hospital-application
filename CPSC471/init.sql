@@ -195,7 +195,7 @@ INSERT INTO DOCTOR
 INSERT INTO USER 
     VALUES (3,'Pierre','Vaidie','pass','Cacscade Hall','5037078788','PATIENT');
 INSERT INTO PATIENT
-    VALUES (3,'Pierre','Vaidie','Cacscade Hall','5037078788', 2,'LONG TERM PATIENT');
+    VALUES (3,'Pierre','Vaidie','Cacscade Hall','5037078788', 2,'LONGTERM');
 INSERT INTO LONGTERMPATIENT
     VALUES (3, 1);
 
