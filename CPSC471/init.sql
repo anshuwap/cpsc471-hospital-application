@@ -164,13 +164,23 @@ CREATE TABLE DVD (
 CREATE TABLE RENT (
     RentalId INT,
     LongTermID INT,
-    BeginDate DaTe,
+    BeginDate Date,
     EndDate Date,
     PRIMARY KEY (RentalId, LongTermId, BeginDate),
     FOREIGN KEY (RentalId) REFERENCES RENTAL(RentalId),
     FOREIGN KEY (LongTermId) REFERENCES LONGTERMPATIENT(PatientId)
 )ENGINE=InnoDb;
-    
+
+
+CREATE TABLE STAY (
+    PatientId INT,
+    BedRoomId INT,
+    BeginDate Date,
+    EndDate Date,
+    PRIMARY KEY (PatientId, BedRoomId, BeginDate),
+    FOREIGN KEY (PatientId) REFERENCES LONGTERMPATIENT(PatientId),
+    FOREIGN KEY (BedRoomId) REFERENCES BEDROOM(RoomId)
+)ENGINE=InnoDb;
 
 
 /** INSERT VALUE **/

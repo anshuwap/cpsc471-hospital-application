@@ -22,16 +22,41 @@
         switch ($sessionUser->UserType) {
             case "SECRETARY":
                 $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
-                $tab[] = '<a href="' . $temp . '" >Create a appointment</a>';
-
+	        $tab[] = '<a href="' . $temp . '" >Alerts</a>';
+                    
                 $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
-	            $tab[] = '<a href="' . $temp . '" >Alerts</a>';
-	            
+                $tab[] = '<a href="' . $temp . '" >Doctor\'s Schedule</a>';
+                
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $tab[] = '<a href="' . $temp . '" >Patient File</a>';
+                
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $tab[] = '<a href="' . $temp . '" >Meal Plan</a>';
+                
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $tab[] = '<a href="' . $temp . '" >Users</a>';
+            
 	            break;
 	            
 	        case "PATIENT":
                 $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
-                $tab[] = '<a href="' . $temp . '" >Rent</a>';
+                $tab[] = '<a href="' . $temp . '" >Rent a Dvd/Book</a>';
+                
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $tab[] = '<a href="' . $temp . '" >Change Meal Plan</a>';
+
+	            
+	            break;
+                
+                case "DOCTOR":              
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $tab[] = '<a href="' . $temp . '" >My Schedule</a>';
+                
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $tab[] = '<a href="' . $temp . '" >Patient File</a>';
+                
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $tab[] = '<a href="' . $temp . '" >Alerts</a>';
 	            
 	            break;
         }
