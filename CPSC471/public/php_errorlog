@@ -1,0 +1,425 @@
+[22-Nov-2011 20:49:38] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Loader/Autoloader.php' (include_path='/home/cpscdb/public_html/CPSC471/library:/home/cpscdb/public_html/CPSC471/application/models:/home/cpscdb/public_html/CPSC471/application/forms:.:/usr/local/php53/pear') in /home/cpscdb/public_html/CPSC471/library/Zend/Application.php on line 80
+[22-Nov-2011 20:49:43] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Loader/Autoloader.php' (include_path='/home/cpscdb/public_html/CPSC471/library:/home/cpscdb/public_html/CPSC471/application/models:/home/cpscdb/public_html/CPSC471/application/forms:.:/usr/local/php53/pear') in /home/cpscdb/public_html/CPSC471/library/Zend/Application.php on line 80
+[22-Nov-2011 20:49:48] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Loader/Autoloader.php' (include_path='/home/cpscdb/public_html/CPSC471/library:/home/cpscdb/public_html/CPSC471/application/models:/home/cpscdb/public_html/CPSC471/application/forms:.:/usr/local/php53/pear') in /home/cpscdb/public_html/CPSC471/library/Zend/Application.php on line 80
+[22-Nov-2011 21:26:16] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:26:16] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:26:18] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:26:18] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:26:21] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:26:21] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:26:25] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:26:25] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:36:40] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:36:40] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:36:43] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:36:43] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:36:45] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:36:45] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:37:35] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:37:35] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:37:35] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:37:35] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:37:35] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:37:35] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:37:35] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:37:35] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:40:34] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:40:34] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:40:35] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:40:35] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:40:35] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:40:35] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:40:46] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:40:46] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:40:48] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:40:48] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:41:01] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:41:01] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:41:04] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:41:04] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:41:04] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:41:04] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:45:27] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:45:27] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:45:52] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:45:52] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:45:54] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:45:54] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:47:04] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:47:04] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/library/Zend/Session/Namespace.php(143): Zend_Session::start(true)
+#1 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(53): Zend_Session_Namespace->__construct('sessionUser')
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/library/Zend/Applic in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:47:04] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:47:04] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/library/Zend/Session/Namespace.php(143): Zend_Session::start(true)
+#1 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(53): Zend_Session_Namespace->__construct('sessionUser')
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/library/Zend/Applic in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:47:05] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:47:05] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/library/Zend/Session/Namespace.php(143): Zend_Session::start(true)
+#1 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(53): Zend_Session_Namespace->__construct('sessionUser')
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/library/Zend/Applic in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:47:06] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:47:06] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/library/Zend/Session/Namespace.php(143): Zend_Session::start(true)
+#1 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(53): Zend_Session_Namespace->__construct('sessionUser')
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/library/Zend/Applic in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:47:06] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:47:06] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/library/Zend/Session/Namespace.php(143): Zend_Session::start(true)
+#1 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(53): Zend_Session_Namespace->__construct('sessionUser')
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/library/Zend/Applic in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:47:06] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:47:06] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/library/Zend/Session/Namespace.php(143): Zend_Session::start(true)
+#1 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(53): Zend_Session_Namespace->__construct('sessionUser')
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/library/Zend/Applic in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:47:07] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:47:07] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/library/Zend/Session/Namespace.php(143): Zend_Session::start(true)
+#1 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(53): Zend_Session_Namespace->__construct('sessionUser')
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/library/Zend/Applic in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:47:07] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:47:07] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/library/Zend/Session/Namespace.php(143): Zend_Session::start(true)
+#1 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(53): Zend_Session_Namespace->__construct('sessionUser')
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/library/Zend/Applic in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:47:07] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 21:47:07] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/library/Zend/Session/Namespace.php(143): Zend_Session::start(true)
+#1 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(53): Zend_Session_Namespace->__construct('sessionUser')
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/library/Zend/Applic in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:52:23] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 199
+[22-Nov-2011 21:52:23] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:52:25] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 199
+[22-Nov-2011 21:52:25] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:53:02] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 199
+[22-Nov-2011 21:53:02] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:54:57] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 199
+[22-Nov-2011 21:54:57] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 21:54:58] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 199
+[22-Nov-2011 21:54:58] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 22:45:32] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 199
+[22-Nov-2011 22:45:32] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:443
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(669): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(622): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(586): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 443
+[22-Nov-2011 22:51:05] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Loader/Autoloader.php' (include_path='/home/cpscdb/public_html/CPSC471/library:/home/cpscdb/public_html/CPSC471/application/models:/home/cpscdb/public_html/CPSC471/application/forms:.:/usr/local/php53/pear') in /home/cpscdb/public_html/CPSC471/library/Zend/Application.php on line 80
+[22-Nov-2011 22:51:09] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Loader/Autoloader.php' (include_path='/home/cpscdb/public_html/CPSC471/library:/home/cpscdb/public_html/CPSC471/application/models:/home/cpscdb/public_html/CPSC471/application/forms:.:/usr/local/php53/pear') in /home/cpscdb/public_html/CPSC471/library/Zend/Application.php on line 80
+[22-Nov-2011 22:51:10] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Loader/Autoloader.php' (include_path='/home/cpscdb/public_html/CPSC471/library:/home/cpscdb/public_html/CPSC471/application/models:/home/cpscdb/public_html/CPSC471/application/forms:.:/usr/local/php53/pear') in /home/cpscdb/public_html/CPSC471/library/Zend/Application.php on line 80
+[22-Nov-2011 22:51:10] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Loader/Autoloader.php' (include_path='/home/cpscdb/public_html/CPSC471/library:/home/cpscdb/public_html/CPSC471/application/models:/home/cpscdb/public_html/CPSC471/application/forms:.:/usr/local/php53/pear') in /home/cpscdb/public_html/CPSC471/library/Zend/Application.php on line 80
+[22-Nov-2011 22:51:10] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Loader/Autoloader.php' (include_path='/home/cpscdb/public_html/CPSC471/library:/home/cpscdb/public_html/CPSC471/application/models:/home/cpscdb/public_html/CPSC471/application/forms:.:/usr/local/php53/pear') in /home/cpscdb/public_html/CPSC471/library/Zend/Application.php on line 80
+[22-Nov-2011 22:54:58] PHP Warning:  include_once(Zend/Db/Adapter/Pdo/Mysql.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 146
+[22-Nov-2011 22:54:58] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening 'Zend/Db/Adapter/Pdo/Mysql.php' for inclusion (include_path='/home/cpscdb/public_html/CPSC471/application/../library:/home/cpscdb/public_html/CPSC471/library:/home/cpscdb/public_html/CPSC471/application/models:/home/cpscdb/public_html/CPSC471/application/forms:.:/usr/local/php53/pear') in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 146
+[22-Nov-2011 22:54:58] PHP Warning:  include_once(Zend/Db/Adapter/Pdo/Mysql.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 146
+[22-Nov-2011 22:54:58] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening 'Zend/Db/Adapter/Pdo/Mysql.php' for inclusion (include_path='/home/cpscdb/public_html/CPSC471/application/../library:/home/cpscdb/public_html/CPSC471/library:/home/cpscdb/public_html/CPSC471/application/models:/home/cpscdb/public_html/CPSC471/application/forms:.:/usr/local/php53/pear') in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 146
+[22-Nov-2011 22:54:58] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'File "Zend/Db/Adapter/Pdo/Mysql.php" does not exist or class "Zend_Db_Adapter_Pdo_Mysql" was not found in the file' in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php:99
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/library/Zend/Db.php(250): Zend_Loader::loadClass('Zend_Db_Adapter...')
+#1 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(32): Zend_Db::factory(Object(Zend_Config))
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(667): Bootstrap->_initAutoload()
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(620): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('autoload')
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(584): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapA in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 99
+[22-Nov-2011 23:00:06] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 23:00:06] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:454
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(667): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(620): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(584): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 454
+[22-Nov-2011 23:00:23] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 23:00:23] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:454
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(667): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(620): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(584): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 454
+[22-Nov-2011 23:04:23] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 23:04:23] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:454
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(667): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(620): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(584): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 454
+[22-Nov-2011 23:04:23] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 23:04:23] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:454
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(667): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(620): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(584): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 454
+[22-Nov-2011 23:04:31] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 23:04:31] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:454
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(667): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(620): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(584): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 454
+[22-Nov-2011 23:04:32] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 23:04:32] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:454
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(667): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(620): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(584): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 454
+[22-Nov-2011 23:13:22] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 23:13:22] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:454
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(667): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(620): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(584): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 454
+[22-Nov-2011 23:13:25] PHP Warning:  is_readable() [<a href='function.is-readable'>function.is-readable</a>]: open_basedir restriction in effect. File(/usr/local/php53/pear/ZendX/Application/Resource/View.php) is not within the allowed path(s): (/home/cpscdb:/usr/lib/php:/usr/php4/lib/php:/usr/local/lib/php:/usr/local/php4/lib/php:/tmp) in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php on line 198
+[22-Nov-2011 23:13:25] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/cpscdb/public_html/CPSC471/library/Zend/Loader.php/198' in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php:454
+Stack trace:
+#0 /home/cpscdb/public_html/CPSC471/application/Bootstrap.php(52): Zend_Session::start()
+#1 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(667): Bootstrap->_initSession()
+#2 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(620): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#3 /home/cpscdb/public_html/CPSC471/library/Zend/Application/Bootstrap/BootstrapAbstract.php(584): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/cpscdb/public_html/CPSC471/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/cpscdb/public_html/CPSC471/public/index.php(3 in /home/cpscdb/public_html/CPSC471/library/Zend/Session.php on line 454

@@ -1,0 +1,93 @@
+<?php echo $this->doctype() ?> <!-- This Line will output the doctype we set inside the bootstrap file -->
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Hospital Application</title>
+        <link rel="stylesheet" href="/CPSC471/public/css/global.css" type="text/css" />
+    </head>
+    <body>
+
+        <!--
+            Header
+        -->
+        
+        <?php
+        $sessionUser = new Zend_Session_Namespace('sessionUser');
+
+        /** Home Button **/
+        $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+        $tab[] = '<a href="' . $temp . '" >Home</a>';
+
+        /** User Buttons **/
+        switch ($sessionUser->UserType) {
+            case "SECRETARY":
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $tab[] = '<a href="' . $temp . '" >Create a appointment</a>';
+
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+	            $tab[] = '<a href="' . $temp . '" >Alerts</a>';
+	            
+	            break;
+	            
+	        case "PATIENT":
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $tab[] = '<a href="' . $temp . '" >Rent</a>';
+	            
+	            break;
+        }
+        
+        /** Disconnect Button **/
+        if ($sessionUser->UserType != null ) {
+                $temp = $this->url(array('controller' => 'index', 'action' => 'logout'));
+                $tab[] = '<a href="' . $temp . '" >Sign Out</a>';
+            }
+        ?>
+
+        <div id="header">
+            <div class="header-logo">
+                <img src="/CPSC471/public/redcross.gif" alt="logo"/>
+                <h1>Hospital Application</h1>
+            </div>
+
+           
+
+            <div class="header-menu">
+                <ul>
+                    <?php foreach ($tab as $t) : ?>
+                        <li> <?php echo $t; ?> </li>
+                    <?php endforeach; ?>
+                    </ul>
+
+                </div>
+            </div>
+            
+            <?php if ($sessionUser->UserId != null) {  ?>
+
+             <div id="id_connect">
+            <?php echo " " . $sessionUser->FName . " " . $sessionUser->LName . " (" . $sessionUser->UserType . ")  "; ?>
+          	</div>
+
+		</div>
+
+
+        <div><br/></div>
+
+                   
+        <?php } ?>
+
+        <!-- 
+            CONTENT
+        -->
+        <div id="content">
+        <?php echo $this->layout()->content ?>
+        </div>
+
+
+        <!--
+            Footer
+        -->
+        <div id="footer">
+            <p>&copy; Hosseini S. - Korchynski C. - Vaidie P. </p>
+        </div>
+    </body>
+</html>

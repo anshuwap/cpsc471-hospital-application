@@ -1,0 +1,263 @@
+
+/* CSS */
+
+/* Mise en Page : Layout */
+
+html {
+    background:#C1C1C1;
+    padding-bottom: 20px;
+}
+
+body
+{
+    font-family: "Lucida Sans Unicode";
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    background:#FFFFFF;
+    -moz-border-radius: 20px 20px 20px 20px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 1px 1px 40px #555;
+}
+
+#header{
+    background:#FFFFFF;
+    -moz-border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.header-logo img {
+    margin:30px;
+    float: left;
+    margin-right:150px;
+    height: 90px;
+    width: 110px;
+}
+
+.header-logo h1 {
+    font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+    font-size:40px;
+    font-weight:bold;
+    color:#FB0329;
+    padding-top:40px;
+    padding-bottom:10px;
+    letter-spacing: 2px;
+}
+
+.header-menu{
+    clear: both;
+    border:none;
+    border:0px;
+    color:#000000;
+    margin:0px;
+    padding:0px;
+    font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.header-menu ul{
+    background:#FB0329;
+    height:35px;
+    list-style:none;
+    margin:0;
+    padding:0;
+
+}
+.header-menu li{
+    float:left;
+    padding:0px;
+    margin-left : 50px;
+}
+.header-menu li a{
+    color:#ffffff;
+    display:block;
+    font-weight:bold;
+    line-height:35px;
+    margin:0px;
+    padding:0px 10px;
+    text-align:center;
+    text-decoration:none;
+}
+.header-menu li a:hover, .header-menu ul li:hover a{
+    color:#FBA403;
+}
+
+#footer{
+    background:#FB0329;
+    height:35px;
+    -moz-border-radius: 0px 0px 20px 20px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+#footer p {
+    font-size:12px;
+    font-weight:bold;
+    color:#ffffff;
+    text-align: center;
+    padding-top:10px;
+}
+
+
+#content {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+h1 {
+    text-align: left;
+}
+
+/* Mise en page : Tableaux */
+
+table {
+
+    margin : auto;
+    border: #FB0329 3px solid;
+    border-collapse:collapse;
+    width:90%;
+
+
+}
+
+table td {
+
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-color : #FB0329;
+    border-left-color:  #FB0329;
+    border-bottom-color:  #FB0329;
+    border-top-color: #FB0329;
+}
+
+table th{
+
+    background-color: #bfbff4;
+    text-align: left;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #FB0329;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-left-color: #FB0329;
+    border-right-color: #FB0329;
+
+}
+
+/* Mise en page : Connexion */
+
+#id_connect{
+    text-align: right;
+    font-size: 16px;
+}
+
+#Connection {
+    text-align: right;
+    font-size: large;
+    font-weight: bolder;
+}
+
+#FormAuth {
+    font-weight: bold;
+    color: #FB0329;
+    width: 27%;
+    position: relative;
+    top: 0px;
+    left: 800px;
+
+}
+
+/* Mise en page: Formulaire */
+
+
+fieldset {
+    text-align : center;
+    border: 2px solid #0080FF; ;
+    padding:5px;
+    margin:5px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 23px;
+}
+label
+{
+    display: block;
+    width: 40%;
+    float: left;
+    text-align: right;
+    letter-spacing: 1px;
+}
+
+#Recherche {
+    display: block;
+    width: 20%;
+    text-align: right;
+    position: absolute;
+    top: 250px;
+    right: 120px;
+}
+
+.errors {
+    color : red ;
+    text-align : center;
+}
+
+input[type=submit]{
+    border:1px solid ;
+}
+
+/* Mise en page: Accueil (Index)  */
+
+#verif{
+    background-color:#F8ECE0;
+    width: 9cm;
+    min-height:5cm;
+    margin-left: 1cm;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    border-top-width: 2px;
+    border-color: red;
+    
+}
+
+
+
+#infos {
+    text-align: left;
+    margin-left: 12cm;
+    width: 20cm;
+    position: absolute;
+    float:left;
+    
+        
+}
+
+#contenu {
+    text-align: center;
+    font-size: 14px;
+}
+
+#logobus {
+    text-align: center;
+}
+
+/* Autre */
+
+#date_affiche {
+    text-align: center;
+}
