@@ -43,6 +43,17 @@ class IndexController extends Zend_Controller_Action {
                     $sessionUser->Adress = $row->Adress;
                     $sessionUser->PhoneNumber = $row->PhoneNumber;
                     $sessionUser->UserType = $row->UserType;
+                    
+                    if ( strcmp($sessionUser->UserType,'PATIENT') == 0 ) {
+                        $patient = new Default_Model_Patient();
+                        $row = $patient->findPatient($sessionUser->FName, $sessionUser->LName, $sessionUser->Adress);
+                        $sessionUser->PatientId = $row->PatientId;
+                        $sessionUser->PreferedDoctor = $row->PreferedDoctor;
+                        
+                        $longterm = new Default_Model_LongTermPatient();
+                        $row = $longterm->findLongTermPatient($sessionUser->PatientId);
+                        $sessionUser->MealId = $row->MealId;
+                    }
 
                     $this->_helper->redirector('index', 'index');
                 } else {

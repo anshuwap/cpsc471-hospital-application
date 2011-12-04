@@ -188,6 +188,10 @@ CREATE TABLE STAY (
 /*MEAL PLAN*/
 INSERT INTO MEALPLAN
     VALUES (1, 'salt free', 'Chicken', 'Beef', 'Beef', 'Beef', 'Chicken', 'Beef', 'CHicken');
+INSERT INTO MEALPLAN
+    VALUES (2, 'sugar', 'Beef', 'Beef', 'Beef', 'Beef', 'Beef', 'Beef', 'Beef');
+INSERT INTO MEALPLAN
+    VALUES (3, 'salt and sugar free', 'Chicken', 'chicken', 'chicken', 'chicken', 'Chicken', 'chicken', 'CHicken');
 
 /*SECRETARY*/
 INSERT INTO USER 
