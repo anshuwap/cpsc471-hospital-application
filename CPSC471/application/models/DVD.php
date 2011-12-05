@@ -1,6 +1,6 @@
 <?php
 
-class Default_Model_Dvd extends Zend_Db_Table {
+class Default_Model_DVD extends Zend_Db_Table {
 
     protected $_name = 'DVD';
 

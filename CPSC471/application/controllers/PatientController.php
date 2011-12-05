@@ -49,7 +49,7 @@ class PatientController extends Zend_Controller_Action {
     public function viewrentalAction() {
         
         $book = new Default_Model_Book;
-        $dvd = new Default_Model_Dvd;
+        $dvd = new Default_Model_DVD;
         
         $this->view->books = $book->findAll();
         $this->view->dvds = $dvd->findAll();
