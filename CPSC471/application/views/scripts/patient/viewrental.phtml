@@ -1,0 +1,36 @@
+<h2>Books :</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Author</th>
+        <th>&nbsp;</th>
+    </tr>
+    <?php foreach ($this->books as $b) : ?>
+        <tr>
+           <td><?php echo $this->escape($b->Name); ?></td>
+           <td><?php echo $this->escape($b->Author); ?></td>  
+           <td><a href="<?php echo $this->url(array('controller' => 'patient',
+                           'action' => 'rent', 'rentalid' => $b->RentalId, 'rentalname' => $b->Name, 'rentaltype' => 'book')); ?>">Rent</a></td>
+        </tr>
+    <?php endforeach; ?>
+</table>
+
+<h2>DVDs :</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Director</th>
+        <th>Duration</th>
+        <th>&nbsp;</th>
+    </tr>
+    <?php foreach ($this->dvds as $d) : ?>
+        <tr>
+           <td><?php echo $this->escape($d->Name); ?></td>
+           <td><?php echo $this->escape($d->Director); ?></td>  
+           <td><?php echo $this->escape($d->Duration); ?> min</td>
+           <td><a href="<?php echo $this->url(array('controller' => 'patient',
+                           'action' => 'rent', 'rentalid' => $b->RentalId, 'rentalname' => $d->Name, 'rentaltype' => 'Dvd')); ?>">Rent</a></td>
+        </tr>
+    <?php endforeach; ?>
+</table>
+

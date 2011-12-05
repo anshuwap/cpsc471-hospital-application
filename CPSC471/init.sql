@@ -1,4 +1,5 @@
 /** DROP OLD TABLE **/
+DROP TABLE STAY;
 DROP TABLE RENT;
 DROP TABLE DVD;
 DROP TABLE BOOK;
@@ -205,6 +206,11 @@ INSERT INTO USER
 INSERT INTO DOCTOR
     VALUES (2,'Block');
 
+INSERT INTO USER 
+    VALUES (4,'Diane','Depardon','pass','7878 98th AVE NE','5037078788','DOCTOR');
+INSERT INTO DOCTOR
+    VALUES (4,'Surgeon');
+
 /*PATIENT*/
 INSERT INTO USER 
     VALUES (3,'Pierre','Vaidie','pass','Cacscade Hall','5037078788','PATIENT');
@@ -212,6 +218,38 @@ INSERT INTO PATIENT
     VALUES (3,'Pierre','Vaidie','Cacscade Hall','5037078788', 2,'LONGTERM');
 INSERT INTO LONGTERMPATIENT
     VALUES (3, 1);
+
+/*RENTAL*/
+INSERT INTO RENTAL
+    VALUES (1,'The Sisters Brothers');
+INSERT INTO RENTAL
+    VALUES (2,'1Q84 ');
+INSERT INTO RENTAL
+    VALUES (3,'The Art of Fielding: A Novel');
+INSERT INTO RENTAL
+    VALUES (4,'The Help');
+INSERT INTO RENTAL
+    VALUES (5,'The Kings Speech');
+
+/*BOOK*/
+INSERT INTO BOOK
+    VALUES (1,'Patrick Dewitt');
+INSERT INTO BOOK
+    VALUES (2,'Haruki Murakami');
+INSERT INTO BOOK
+    VALUES (3,'Chad Harbach');
+
+/*DVD*/
+INSERT INTO DVD
+    VALUES (4,'Jessica Chastain', 137);
+INSERT INTO DVD
+    VALUES (5,'Tom Hooper', 119);
+
+
+/*RENT*/
+INSERT INTO RENT
+    VALUES (5,3,'2011-12-01','2011-12-23');
+
 
     
     

@@ -4,6 +4,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Hospital Application</title>
         <link rel="stylesheet" href="/CPSC471/public/css/global.css" type="text/css" />
+        <script src="/CPSC471/public/jquery/development-bundle/jquery-1.6.2.js"></script>
+	<script src="/CPSC471/public/jquery/development-bundle/ui/jquery.ui.core.js"></script>
+	<script src="/CPSC471/public/jquery/development-bundle/ui/jquery.ui.widget.js"></script>
+	<script src="/CPSC471/public/jquery/development-bundle/ui/jquery.ui.datepicker.js"></script>
+        <link rel="stylesheet" href="/CPSC471/public/jquery/development-bundle/themes/custom-theme/jquery.ui.all.css">
     </head>
     <body>
 
@@ -13,14 +18,14 @@
         
         <?php
         $sessionUser = new Zend_Session_Namespace('sessionUser');
-
-        /** Home Button **/
-        $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
-        $tab[] = '<a href="' . $temp . '" >Home</a>';
+        $tab = array();
 
         /** User Buttons **/
         switch ($sessionUser->UserType) {
             case "SECRETARY":
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $tab[] = '<a href="' . $temp . '" >Home</a>';
+        
                 $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
 	        $tab[] = '<a href="' . $temp . '" >Alerts</a>';
                     
@@ -38,8 +43,11 @@
             
 	            break;
 	            
-	        case "PATIENT":
-                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+            case "PATIENT":
+                $temp = $this->url(array('controller' => 'patient', 'action' => 'index'));
+                $tab[] = '<a href="' . $temp . '" >Home</a>';
+        
+                $temp = $this->url(array('controller' => 'patient', 'action' => 'viewrental'));
                 $tab[] = '<a href="' . $temp . '" >Rent a Dvd/Book</a>';
                 
                 $temp = $this->url(array('controller' => 'patient', 'action' => 'viewmealplan' ));
@@ -48,7 +56,10 @@
 	            
 	            break;
                 
-                case "DOCTOR":              
+            case "DOCTOR":   
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $tab[] = '<a href="' . $temp . '" >Home</a>';
+        
                 $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
                 $tab[] = '<a href="' . $temp . '" >My Schedule</a>';
                 
@@ -65,6 +76,9 @@
         if ($sessionUser->UserType != null ) {
                 $temp = $this->url(array('controller' => 'index', 'action' => 'logout'));
                 $tab[] = '<a href="' . $temp . '" >Sign Out</a>';
+            } else {
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $tab[] = '<a href="' . $temp . '" >Home</a>';
             }
         ?>
 
@@ -115,4 +129,12 @@
             <p>&copy; Hosseini S. - Korchynski C. - Vaidie P. </p>
         </div>
     </body>
+    
+<script>
+	$(function() {
+		$( "#BeginDate" ).datepicker({dateFormat: 'yy-mm-dd'});
+                $( "#EndDate" ).datepicker({dateFormat: 'yy-mm-dd'});
+	});
+</script>
+
 </html>
