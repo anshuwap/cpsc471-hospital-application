@@ -53,6 +53,8 @@ class IndexController extends Zend_Controller_Action {
                         $longterm = new Default_Model_LongTermPatient();
                         $row = $longterm->findLongTermPatient($sessionUser->PatientId);
                         $sessionUser->MealId = $row->MealId;
+                        
+                        $this->_helper->redirector('index', 'patient');
                     }
 
                     $this->_helper->redirector('index', 'index');
