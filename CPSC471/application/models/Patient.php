@@ -10,6 +10,10 @@ class Default_Model_Patient extends Zend_Db_Table {
                 "' and Adress= '".$adress."'");
     }
     
+    public function findPatientWithId($id) {
+        return $this->fetchRow("PatientId =".$id);
+        
+    }
 }
 
 ?>

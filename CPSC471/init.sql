@@ -211,6 +211,11 @@ INSERT INTO USER
 INSERT INTO DOCTOR
     VALUES (4,'Surgeon');
 
+INSERT INTO USER 
+    VALUES (5,'Hannah','Creeper','pass','7878 98th AVE NE','5037078788','DOCTOR');
+INSERT INTO DOCTOR
+    VALUES (5,'Anesthesiologist');
+
 /*PATIENT*/
 INSERT INTO USER 
     VALUES (3,'Pierre','Vaidie','pass','Cacscade Hall','5037078788','PATIENT');
