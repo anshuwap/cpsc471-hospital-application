@@ -63,10 +63,10 @@
                 $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
                 $tab[] = '<a href="' . $temp . '" >My Schedule</a>';
                 
-                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $temp = $this->url(array('controller' => 'patientfile', 'action' => 'browsepatientfile'));
                 $tab[] = '<a href="' . $temp . '" >Patient File</a>';
                 
-                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $temp = $this->url(array('controller' => 'alert', 'action' => 'viewreceivedalerts'));
                 $tab[] = '<a href="' . $temp . '" >Alerts</a>';
 	            
 	            break;

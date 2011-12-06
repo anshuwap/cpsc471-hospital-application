@@ -1,0 +1,22 @@
+<a href="<?php echo $this->url(array('controller' => 'alert',
+                           'action' => 'browseusers')); ?>">Send an alert</a>
+<h2>Your Alerts :</h2>
+<table>
+    <tr>
+        <th>From </th>
+        <th>Date</th>
+        <th>Description</th>
+        <th>&nbsp</th>
+    </tr>
+    <?php foreach ($this->userAlerts as $a) : ?>
+        <tr>
+           <td><?php echo $this->escape($a->LName); ?> <?php echo $this->escape($a->FName);?> (<?php echo $this->escape($a->UserType);?>)</td>
+           <td><?php echo $this->escape($a->DateA); ?> (<?php echo $this->escape($a->TimeA); ?>)</td>  
+           <td><?php echo $this->escape($a->Description); ?></td>
+           <td><a href="<?php echo $this->url(array('controller' => 'alert',
+                           'action' => 'sendalert', 'receiverid' => $a->SenderId, 'receivername' => $a->LName.' '.$a->FName)); ?>">Reply</a></td>
+        </tr>                                        
+    <?php endforeach; ?>
+</table>
+
+

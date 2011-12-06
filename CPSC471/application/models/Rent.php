@@ -15,7 +15,6 @@ class Default_Model_Rent extends Zend_Db_Table {
     } 
     
     public function addRent($RentalId, $PatientId, $BeginDate, $EndDate) {
-        /** Ajoute un entretien*/
         $row = $this->createRow();
         $row->RentalId = $RentalId;
         $row->LongTermID = $PatientId;

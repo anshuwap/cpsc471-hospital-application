@@ -1,0 +1,30 @@
+<?php $sessionUser = new Zend_Session_Namespace('sessionUser'); ?>
+<h2>Patient Files:</h2>
+Search a patient:
+<?php
+    echo $this->form ;
+?>
+<table>
+    <tr>
+        <th>Patient Name</th>
+        <th>Doctor Name</th>
+        <th>Date of Visit</th>
+        <th>Length of Visit</th>
+        <th>Type of Visit</th>
+        <th>Description</th>
+        <th>Doctor's Notes</th>
+        <th>&nbsp</th>
+    </tr>
+    <?php foreach ($this->allfiles as $f) : ?>
+        <tr>
+           <td><?php echo $f->PLName; ?> <?php echo $this->escape($f->PFName);?> </td>
+           <td><?php echo $f->LName; ?> <?php echo $this->escape($f->FName);?> </td>
+           <td><?php echo $f->DateOfVisit; ?></td>
+           <td><?php echo $f->LenghtOfVisit; ?></td>
+           <td><?php echo $f->TypeOfVisit; ?></td>
+           <td><?php echo $f->Description; ?></td>
+           <td><?php echo $f->DoctorNotes; ?></td>
+           <td><a href="coucou">Edit</a></td>
+        </tr>                                        
+    <?php endforeach; ?>
+</table>

@@ -250,8 +250,10 @@ INSERT INTO DVD
 INSERT INTO RENT
     VALUES (5,3,'2011-12-01','2011-12-23');
 
+/*ALERT*/
+INSERT INTO ALERTS
+    VALUES (1,2,CURDATE(),CURTIME(),'Are you free tomorrow at 6pm ?');
 
-    
-    
-
-    
+/*PATIENTFILE*/
+INSERT INTO PATIENTFILE
+    VALUES (3,4,CURDATE(),60,'Operation', 'Operation of the heart','All is good');

@@ -1,0 +1,25 @@
+<?php $sessionUser = new Zend_Session_Namespace('sessionUser'); ?>
+<h2>Send an alert to a User :</h2>
+Search a user:
+<?php
+    echo $this->form ;
+?>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Type</th>
+        <th>&nbsp</th>
+    </tr>
+    <?php foreach ($this->allusers as $a) : ?>
+        <?php if ( $a->UserId != $sessionUser->UserId && strcmp('PATIENT',$a->UserType) != 0 ) { ?>
+        <tr>
+           <td><?php echo $this->escape($a->LName); ?> <?php echo $this->escape($a->FName);?> </td>
+           <td><?php echo $this->escape($a->PhoneNumber); ?> </td>  
+           <td><?php echo $this->escape($a->UserType); ?></td>
+           <td><a href="<?php echo $this->url(array('controller' => 'alert',
+                           'action' => 'sendalert', 'receiverid' => $a->UserId, 'receivername' => $a->LName.' '.$a->FName)); ?>">Send an alert</a></td>
+        </tr>                                        
+    <?php } endforeach; ?>
+</table>
+
