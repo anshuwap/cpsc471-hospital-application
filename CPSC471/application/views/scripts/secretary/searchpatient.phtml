@@ -1,0 +1,27 @@
+<?php $sessionUser = new Zend_Session_Namespace('sessionUser'); ?>
+<h2>Which Patient Would You Like To Edit :</h2>
+Search a user:
+<?php
+    echo $this->form ;
+?>
+<table>
+    <tr>
+    	<th>Id</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Edit?</th>
+        <th>Delete?</th>
+    </tr>
+    <?php foreach ($this->allpatients as $a) : ?>
+        
+        <tr>
+           <td><?php echo $this->escape($a->PatientId); ?> </td>  
+           <td><?php echo $this->escape($a->LName); ?> <?php echo $this->escape($a->FName);?> </td>
+           <td><?php echo $this->escape($a->PatientType); ?></td>
+           <td><a href="<?php echo $this->url(array('controller' => 'secretary',
+                           'action' => 'editpatient', 'patientid' => $a->PatientId)); ?>">Edit</a></td>
+           <td><a href="<?php echo $this->url(array('controller' => 'secretary',
+                           'action' => 'deletepatient', 'patientid' => $a->PatientId)); ?>">Delete</a></td>
+        </tr>                                        
+    <?php  endforeach; ?>
+</table>

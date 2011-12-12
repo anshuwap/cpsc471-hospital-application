@@ -27,13 +27,16 @@
                 $tab[] = '<a href="' . $temp . '" >Home</a>';
         
                 $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
-	        $tab[] = '<a href="' . $temp . '" >Alerts</a>';
+	       	    $tab[] = '<a href="' . $temp . '" >Alerts</a>';
                     
                 $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
-                $tab[] = '<a href="' . $temp . '" >Doctor\'s Schedule</a>';
+                $tab[] = '<a href="' . $temp . '" >Doctor</a>';
+                            
+                $temp = $this->url(array('controller' => 'secretary', 'action' => 'patient'));
+                $tab[] = '<a href="' . $temp . '" > Patient</a>';
                 
                 $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
-                $tab[] = '<a href="' . $temp . '" >Patient File</a>';
+                $tab[] = '<a href="' . $temp . '" >Patients File</a>';
                 
                 $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
                 $tab[] = '<a href="' . $temp . '" >Meal Plan</a>';

@@ -261,3 +261,25 @@ input[type=submit]{
 #date_affiche {
     text-align: center;
 }
+
+.errorMessage, .successMessage {
+	display:none;
+	border: 1px solid red;
+	font-family: Trebuchet MS, Arial, Sans-Serif;
+	color: #b51010;
+
+	text-align:center;
+	padding-top:15px;
+	margin-right: 20px;
+	height: 30px;
+	width: 500px;
+	background-color:#ffc5c5;
+	
+}
+
+.successMessage{
+	border: 1px solid green;
+	background-color:#a8ffa8;
+	color:green;
+	
+}

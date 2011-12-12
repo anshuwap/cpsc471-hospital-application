@@ -73,7 +73,7 @@ class PatientController extends Zend_Controller_Action {
                 
                 $rent = new Default_Model_Rent();
                 $Error = null;
-                //On vÃ©rifie si le chauffeur est libre
+                //On vérifie si le chauffeur est libre
                 $res = $rent->rentIsPossible($rentalId, $beginDate, $endDate);
                 foreach ($res as $tmp) {
                     $Error = 'The '.$this->view->Type." ".$this->view->Name." is not free";
