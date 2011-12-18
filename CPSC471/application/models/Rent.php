@@ -2,13 +2,13 @@
 
 class Default_Model_Rent extends Zend_Db_Table {
 
-    protected $_name = 'RENT';
+    protected $_name = 'rent';
     
     public function userRents($id) {
         $select = $this->select();
         $select->setIntegrityCheck(false);
-        $select->from('RENT', 'RENT.*');
-        $select->join('RENTAL', 'RENTAL.RentalId = RENT.RentalId');
+        $select->from('rent', 'rent.*');
+        $select->join('rental', 'rental.RentalId = rent.RentalId');
         $select->where('LongTermID = ? ' ,$id)
                ->where('CURDATE() <= EndDate'); 
         return $this->fetchAll($select);

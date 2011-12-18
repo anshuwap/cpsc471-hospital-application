@@ -2,15 +2,15 @@
 
 class Default_Model_Alert extends Zend_Db_Table {
 
-    protected $_name = 'ALERTS';
+    protected $_name = 'alerts';
     
     public function findReceivedAlerts($userId) {
   
         $select = $this->select();
         $select->setIntegrityCheck(false);
-        $select->from('ALERTS', 'ALERTS.*');
-        $select->join('USER', 'USER.UserId = ALERTS.SenderId');
-        $select->where('ALERTS.ReceiverId = ?', $userId);
+        $select->from('alerts', 'alerts.*');
+        $select->join('user', 'user.UserId = alerts.SenderId');
+        $select->where('alerts.ReceiverId = ?', $userId);
         $select->order(array('DateA DESC', 'TimeA DESC'));
         return $this->fetchAll($select);
         

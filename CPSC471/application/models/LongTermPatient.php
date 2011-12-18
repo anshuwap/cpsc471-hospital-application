@@ -2,7 +2,7 @@
 
 class Default_Model_LongTermPatient extends Zend_Db_Table {
 
-    protected $_name = 'LONGTERMPATIENT';
+    protected $_name = 'longtermpatient';
 
     public function findLongTermPatient($id) {
         /** find a User thanks to his id */

@@ -3,14 +3,14 @@
 
 class Default_Model_PatientFile extends Zend_Db_Table {
 
-    protected $_name = 'PATIENTFILE';
+    protected $_name = 'patientfile';
     
     public function findAllPatientFiles() {
         $select = $this->select();
         $select->setIntegrityCheck(false);
-        $select->from('PATIENTFILE', 'PATIENTFILE.*'); 
-        $select->join('PATIENT', 'PATIENT.PatientId = PATIENTFILE.PatientId', array("PLName" => "PATIENT.LName", "PFName" => "PATIENT.FName"));
-        $select->join('USER', 'USER.UserId = PATIENTFILE.DoctorId');
+        $select->from('patientfile', 'patientfile.*'); 
+        $select->join('patient', 'patient.PatientId = patientfile.PatientId', array("PLName" => "patient.LName", "PFName" => "patient.FName"));
+        $select->join('user', 'user.UserId = patientfile.DoctorId');
         $select->order(array('DateOfVisit DESC'));
         
        
@@ -18,28 +18,29 @@ class Default_Model_PatientFile extends Zend_Db_Table {
     }
     
     public function findPatientFileWithName($lname, $fname) {
-        
+
         $select = $this->select();
         $select->setIntegrityCheck(false);
-        $select->from('PATIENTFILE', 'PATIENTFILE.*'); 
-        $select->join('PATIENT', 'PATIENT.PatientId = PATIENTFILE.PatientId', array("PLName" => "PATIENT.LName", "PFName" => "PATIENT.FName"));
-        $select->join('USER', 'USER.UserId = PATIENTFILE.DoctorId');
+        $select->from('patientfile', 'patientfile.*');
+        $select->join('patient', 'patient.PatientId = patientfile.PatientId', array("PLName" => "patient.LName", "PFName" => "patient.FName"));
+        $select->join('user', 'user.UserId = patientfile.DoctorId');
         $select->order(array('DateOfVisit DESC'));
-        
-        if ( $lname == null && $fname ==null ) {
+
+        if ($lname == null && $fname == null) {
             return $this->findAllPatientFiles();
-        } else if ( $lname == null ) {
-            $select->where('PATIENT.FName = ? ' ,$fname);
+        } else if ($lname == null) {
+            $select->where('patient.FName = ? ', $fname);
             return $this->fetchAll($select);
-        } else if ( $fname == null ) {
-            $select->where('PATIENT.LName = ? ' ,$lname);
+        } else if ($fname == null) {
+            $select->where('patient.LName = ? ', $lname);
             return $this->fetchAll($select);
-        } else { 
-            $select->where('PATIENT.FName = ? ' ,$fname);
-            $select->where('PATIENT.LName = ? ' ,$lname);
+        } else {
+            $select->where('patient.FName = ? ', $fname);
+            $select->where('patient.LName = ? ', $lname);
             return $this->fetchAll($select);
         }
     }
+    
     
     public function findAPatientFile($PatientId, $DoctorId, $Date) {
         $select = $this->select();

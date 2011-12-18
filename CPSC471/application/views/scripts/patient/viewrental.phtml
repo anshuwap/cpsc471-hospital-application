@@ -29,7 +29,7 @@
            <td><?php echo $this->escape($d->Director); ?></td>  
            <td><?php echo $this->escape($d->Duration); ?> min</td>
            <td><a href="<?php echo $this->url(array('controller' => 'patient',
-                           'action' => 'rent', 'rentalid' => $b->RentalId, 'rentalname' => $d->Name, 'rentaltype' => 'Dvd')); ?>">Rent</a></td>
+                           'action' => 'rent', 'rentalid' => $d->RentalId, 'rentalname' => $d->Name, 'rentaltype' => 'Dvd')); ?>">Rent</a></td>
         </tr>
     <?php endforeach; ?>
 </table>

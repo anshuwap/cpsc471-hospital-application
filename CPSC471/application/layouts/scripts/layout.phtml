@@ -67,7 +67,7 @@
                 $temp = $this->url(array('controller' => 'index', 'action' => 'index'), null, true);
                 $tab[] = '<a href="' . $temp . '" >Home</a>';
         
-                $temp = $this->url(array('controller' => 'index', 'action' => 'index'), null, true);
+                $temp = $this->url(array('controller' => 'schedule', 'action' => 'viewschedule'), null, true);
                 $tab[] = '<a href="' . $temp . '" >My Schedule</a>';
                 
                 $temp = $this->url(array('controller' => 'patientfile', 'action' => 'browsepatientfile'), null, true);
@@ -147,6 +147,7 @@
 		$( "#BeginDate" ).datepicker({dateFormat: 'yy-mm-dd'});
                 $( "#EndDate" ).datepicker({dateFormat: 'yy-mm-dd'});
                 $( "#date" ).datepicker({dateFormat: 'yy-mm-dd'});
+                $( "#Date" ).datepicker({dateFormat: 'yy-mm-dd'});
 	});
 </script>
 

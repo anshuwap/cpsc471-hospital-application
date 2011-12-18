@@ -2,7 +2,7 @@
 
 class Default_Model_Specialty extends Zend_Db_Table {
 
-    protected $_name = 'SPECIALITY';
+    protected $_name = 'speciality';
     protected $_primary = 'DoctorId';
     
     public function findAll() {

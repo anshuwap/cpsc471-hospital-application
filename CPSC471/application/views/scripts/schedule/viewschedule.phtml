@@ -1,0 +1,94 @@
+<h1>
+    My Schedule
+</h1>
+
+
+<?php
+
+function datePlus($dateDo) {
+    date_default_timezone_set('UTC');
+    $timeStamp = strtotime($dateDo);
+    $timeStamp += 24 * 60 * 60;
+    $newDate = date("Y-m-d", $timeStamp);
+    return $newDate;
+}
+
+function dateMoins($dateDo) {
+    date_default_timezone_set('UTC');
+    $timeStamp = strtotime($dateDo);
+    $timeStamp -= 24 * 60 * 60;
+    $newDate = date("Y-m-d", $timeStamp);
+    return $newDate;
+}
+
+$dateplus = datePlus($this->date);
+$datemoins = dateMoins($this->date);
+?>
+
+<div id="date_affiche"> <a href="<?php echo $this->url(array('controller' => 'schedule',
+    'action' => 'viewschedule', 'date' => $datemoins)); ?>">&lt;--</a>
+                                  <?php echo $this->date; ?>
+    <a href="<?php echo $this->url(array('controller' => 'schedule',
+                                      'action' => 'viewschedule', 'date' => $dateplus)); ?>">--&gt;</a>
+ </div>
+ 
+<div><br/></div>
+
+ <table>
+
+  <tr>
+                                   <th>Patient's Name</th>
+                                      <th>12am</th>
+                                      <th>1am</th>
+                                      <th>2am</th>
+                                      <th>3am</th>
+                                      <th>4am</th>
+                                      <th>5am</th>
+                                      <th>6am</th>
+                                      <th>7am</th>
+                                      <th>8am</th>
+                                      <th>9am</th>
+                                      <th>10am</th>
+                                      <th>11am</th>
+                                      <th>12pm</th>
+                                      <th>1pm</th>
+                                      <th>2pm</th>
+                                      <th>3pm</th>
+                                      <th>4pm</th>
+                                      <th>5pm</th>
+                                      <th>6pm</th>
+                                      <th>7pm</th>
+                                      <th>8pm</th>
+                                      <th>9pm</th>
+                                      <th>10pm</th>
+                                      <th>11pm</th>
+                              
+         
+                                  </tr>
+
+    <?php for ($i = 0; $i < $this->line; $i++) {
+    ?>
+                                          <tr>
+                                              <td><?php echo $this->patientname[$i]; ?></td>
+        <?php for ($j = 0; $j < 24; $j++) {
+ ?>
+                                              <td>
+            <?php
+                                              if ($this->tab[$i][$j] != null) { ?>
+                                                  <?php echo $this->escape($this->tab[$i][$j]->RoomId); ?>
+
+                                                  
+                                              <?php } else {
+                                                  echo '&nbsp;';
+                                              }
+            ?>
+                                              </td>
+    <?php } ?>
+                                          </tr>
+<?php } ?>
+                                  </table>
+
+
+<div id="Recherche">
+<?php echo $this->form ;?>
+</div>

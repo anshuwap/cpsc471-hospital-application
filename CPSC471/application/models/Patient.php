@@ -2,7 +2,7 @@
 
 class Default_Model_Patient extends Zend_Db_Table {
 
-    protected $_name = 'PATIENT';
+    protected $_name = 'patient';
 	protected $_sequence = true;
 
     public function findPatient($fname, $lname, $adress) {

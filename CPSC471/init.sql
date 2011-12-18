@@ -262,3 +262,7 @@ INSERT INTO ALERTS
 /*PATIENTFILE*/
 INSERT INTO PATIENTFILE
     VALUES (3,4,CURDATE(),60,'Operation', 'Operation of the heart','All is good');
+
+
+INSERT INTO schedule
+    VALUES (1,1,3,4,CURDATE(),10:45:00, 11:45:00);

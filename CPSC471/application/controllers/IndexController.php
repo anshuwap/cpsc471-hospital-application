@@ -26,17 +26,19 @@ class IndexController extends Zend_Controller_Action {
                 
                 //try to Auth the user
                 $authAdapter = new Zend_Auth_Adapter_DbTable(Zend_Db_Table::getDefaultAdapter ());
-                $authAdapter->setTableName('USER')
+                $authAdapter->setTableName('user')
                         ->setIdentityColumn('UserId')
                         ->setCredentialColumn('Pwd')
                         ->setIdentity($login)
                         ->setCredential($password);
                 $authAuthenticate = $authAdapter->authenticate();
+          
                 
                 if ($authAuthenticate->isValid()) {
                     //We get the user's informations and we store them 
                     $user = new Default_Model_User();
                     $row = $user->findUser($login);
+                    
                     $sessionUser = new Zend_Session_Namespace('sessionUser');
                     $sessionUser->UserId = $login;
                     $sessionUser->FName = $row->FName;
@@ -63,8 +65,8 @@ class IndexController extends Zend_Controller_Action {
                     echo ' * User doesn\'t exist or wrong password';
                 }
             }
+            }
         }
-    }
 
 
     //To disconnect the user
