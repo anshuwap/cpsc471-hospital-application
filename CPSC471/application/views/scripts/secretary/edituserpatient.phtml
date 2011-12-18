@@ -1,0 +1,9 @@
+<h2>Edit A Long Term Patient:</h2>
+Edit the Long Term Patient's Information here:
+<?php
+	if ($this->errorMessage != "")
+		echo "<div class='errorMessage' style='display:block'>" . $this->errorMessage . "</div>";
+	$this->errorMessage = "";
+	
+    echo $this->form ;
+?>

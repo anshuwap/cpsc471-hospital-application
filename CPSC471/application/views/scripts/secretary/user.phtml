@@ -1,0 +1,27 @@
+<?php $sessionUser = new Zend_Session_Namespace('sessionUser');
+if($sessionUser->successMessage != "")
+{
+	echo "<div class='successMessage' style='display:block'>" . $sessionUser->successMessage . "</div>";
+}
+$sessionUser->successMessage = "";
+
+ ?>
+
+<h2> 
+</p>Doctor: <a href="<?php echo $this->url(array('controller' => 'secretary',
+                           'action' => 'searchdoctor')); ?>">Edit</a>
+or <a href="<?php echo $this->url(array('controller' => 'secretary',
+                           'action' => 'adddoctor')); ?>">Add</a>
+<br />
+Secretary: <a href="<?php echo $this->url(array('controller' => 'secretary',
+                           'action' => 'searchsecretary')); ?>">Edit</a>
+or <a href="<?php echo $this->url(array('controller' => 'secretary',
+                           'action' => 'addsecretary')); ?>">Add</a> 
+
+<br />
+Long Term Patient: <a href="<?php echo $this->url(array('controller' => 'secretary',
+                           'action' => 'searchuserpatient')); ?>">Edit</a>
+or <a href="<?php echo $this->url(array('controller' => 'secretary',
+                           'action' => 'adduserpatient')); ?>">Add</a>     
+                                             
+</h2>

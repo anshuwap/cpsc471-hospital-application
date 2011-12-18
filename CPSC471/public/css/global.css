@@ -98,10 +98,14 @@ body
     padding-top:10px;
 }
 
-
+#specialty-label{
+	padding-bottom:20px;
+	
+}
 #content {
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom:10px;
 }
 
 h1 {

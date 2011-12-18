@@ -1,5 +1,5 @@
 <?php $sessionUser = new Zend_Session_Namespace('sessionUser'); ?>
-<h2>Which Patient Would You Like To Edit :</h2>
+<h2>Which Long Term Patient Would You Like To Edit :</h2>
 Search a user:
 <?php
     echo $this->form ;
@@ -21,16 +21,18 @@ Search a user:
         <th>Edit?</th>
         <th>Delete?</th>
     </tr>
-    <?php foreach ($this->allpatients as $a) : ?>
+    <?php foreach ($this->allusers as $a) : 
+    	if (strcmp(strtoupper($a->UserType),"PATIENT") == 0){?>
         
         <tr>
-           <td><?php echo $this->escape($a->PatientId); ?> </td>  
+           <td><?php echo $this->escape($a->UserId); ?> </td>  
            <td><?php echo $this->escape($a->LName); ?> <?php echo $this->escape($a->FName);?> </td>
-           <td><?php echo $this->escape($a->PatientType); ?></td>
+           <td><?php echo $this->escape($a->UserType); ?></td>
            <td><a style="color:black;" href="<?php echo $this->url(array('controller' => 'secretary',
-                           'action' => 'editpatient', 'patientid' => $a->PatientId)); ?>">Edit</a></td>
-           <td><a style="text-decoration: underline; color:black;" onclick="<?php echo "conf('" . $this->url(array('controller' => 'secretary',
-                           'action' => 'deletepatient', 'patientid' => $a->PatientId)) . "')"; ?>">Delete</a></td>
+                           'action' => 'edituserpatient', 'userid' => $a->UserId)); ?>">Edit</a></td>
+           <td><a style="text-decoration:underline; color:black;" onclick="<?php echo "conf('" . $this->url(array('controller' => 'secretary',
+                           'action' => 'deleteuserpatient', 'userid' => $a->UserId)) . "')"; ?>">Delete</a></td>
         </tr>                                        
-    <?php  endforeach; ?>
+    <?php  }
+    endforeach; ?>
 </table>

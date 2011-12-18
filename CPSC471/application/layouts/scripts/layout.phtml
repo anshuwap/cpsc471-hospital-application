@@ -19,57 +19,61 @@
         <?php
         $sessionUser = new Zend_Session_Namespace('sessionUser');
         $tab = array();
+		$tab2 = array();
 
         /** User Buttons **/
         switch ($sessionUser->UserType) {
             case "SECRETARY":
-                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'), null, true);
                 $tab[] = '<a href="' . $temp . '" >Home</a>';
         
-                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'), null, true);
 	       	    $tab[] = '<a href="' . $temp . '" >Alerts</a>';
-                    
-                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'), null, true);
+                $tab[] = '<a href="' . $temp . '" >Appointments</a>';
+                   
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'), null, true);
                 $tab[] = '<a href="' . $temp . '" >Doctor</a>';
                             
-                $temp = $this->url(array('controller' => 'secretary', 'action' => 'patient'));
+                $temp = $this->url(array('controller' => 'secretary', 'action' => 'patient'), null, true);
                 $tab[] = '<a href="' . $temp . '" > Patient</a>';
                 
-                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'), null, true);
                 $tab[] = '<a href="' . $temp . '" >Patients File</a>';
                 
-                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'), null, true);
                 $tab[] = '<a href="' . $temp . '" >Meal Plan</a>';
                 
-                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $temp = $this->url(array('controller' => 'secretary', 'action' => 'user'), null, true);
                 $tab[] = '<a href="' . $temp . '" >Users</a>';
             
 	            break;
 	            
             case "PATIENT":
-                $temp = $this->url(array('controller' => 'patient', 'action' => 'index'));
+                $temp = $this->url(array('controller' => 'patient', 'action' => 'index'), null, true);
                 $tab[] = '<a href="' . $temp . '" >Home</a>';
         
-                $temp = $this->url(array('controller' => 'patient', 'action' => 'viewrental'));
+                $temp = $this->url(array('controller' => 'patient', 'action' => 'viewrental'), null, true);
                 $tab[] = '<a href="' . $temp . '" >Rent a Dvd/Book</a>';
                 
-                $temp = $this->url(array('controller' => 'patient', 'action' => 'viewmealplan' ));
+                $temp = $this->url(array('controller' => 'patient', 'action' => 'viewmealplan' ), null, true);
                 $tab[] = '<a href="' . $temp . '" >Change Meal Plan</a>';
 
 	            
 	            break;
                 
             case "DOCTOR":   
-                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'), null, true);
                 $tab[] = '<a href="' . $temp . '" >Home</a>';
         
-                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
+                $temp = $this->url(array('controller' => 'index', 'action' => 'index'), null, true);
                 $tab[] = '<a href="' . $temp . '" >My Schedule</a>';
                 
-                $temp = $this->url(array('controller' => 'patientfile', 'action' => 'browsepatientfile'));
+                $temp = $this->url(array('controller' => 'patientfile', 'action' => 'browsepatientfile'), null, true);
                 $tab[] = '<a href="' . $temp . '" >Patient File</a>';
                 
-                $temp = $this->url(array('controller' => 'alert', 'action' => 'viewreceivedalerts'));
+                $temp = $this->url(array('controller' => 'alert', 'action' => 'viewreceivedalerts'), null, true);
                 $tab[] = '<a href="' . $temp . '" >Alerts</a>';
 	            
 	            break;
@@ -77,11 +81,11 @@
         
         /** Disconnect Button **/
         if ($sessionUser->UserType != null ) {
-                $temp = $this->url(array('controller' => 'index', 'action' => 'logout'));
-                $tab[] = '<a href="' . $temp . '" >Sign Out</a>';
+                $temp2 = $this->url(array('controller' => 'index', 'action' => 'logout'), null, true);
+                $tab2[] = '<p style="position:relative; margin-top:-38px; margin-right:-1000px;"><a style="color:white;text-decoration:none;" onmouseover="this.style.color=\'#FBA403\';" onmouseout="this.style.color=\'white\';" href="' . $temp2 . '" >Sign Out</a></p>';
             } else {
-                $temp = $this->url(array('controller' => 'index', 'action' => 'index'));
-                $tab[] = '<a href="' . $temp . '" >Home</a>';
+                $temp2 = $this->url(array('controller' => 'index', 'action' => 'index'), null, true);
+                $tab[] = '<a href="' . $temp2 . '" >Home</a>';
             }
         ?>
 
@@ -129,7 +133,12 @@
             Footer
         -->
         <div id="footer">
-            <p>&copy; Hosseini S. - Korchynski C. - Vaidie P. </p>
+            <p>&copy; Hosseini S. - Korchynski C. - Vaidie P. 
+         
+            		<?php foreach ($tab2 as $t2) : ?>
+                        <?php echo $t2; ?> 
+                    <?php endforeach; ?>
+            </p>
         </div>
     </body>
     
