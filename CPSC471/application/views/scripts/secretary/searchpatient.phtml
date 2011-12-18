@@ -29,7 +29,7 @@ Search a user:
            <td><?php echo $this->escape($a->PatientType); ?></td>
            <td><a style="color:black;" href="<?php echo $this->url(array('controller' => 'secretary',
                            'action' => 'editpatient', 'patientid' => $a->PatientId)); ?>">Edit</a></td>
-           <td><a style="text-decoration: underline; color:black;" onclick="<?php echo "conf('" . $this->url(array('controller' => 'secretary',
+           <td><a style="text-decoration: underline; color:black;cursor:pointer;" onclick="<?php echo "conf('" . $this->url(array('controller' => 'secretary',
                            'action' => 'deletepatient', 'patientid' => $a->PatientId)) . "')"; ?>">Delete</a></td>
         </tr>                                        
     <?php  endforeach; ?>

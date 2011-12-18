@@ -8,7 +8,7 @@ class FormEditSecretary extends Zend_Form {
 
 		$pwd = new Zend_Form_Element_Text('pwd');
         $pwd->setLabel('Password :');
-        $pwd->setRequired(true);
+    
 
 		
 		

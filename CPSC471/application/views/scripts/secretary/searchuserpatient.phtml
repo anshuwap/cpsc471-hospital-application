@@ -30,7 +30,7 @@ Search a user:
            <td><?php echo $this->escape($a->UserType); ?></td>
            <td><a style="color:black;" href="<?php echo $this->url(array('controller' => 'secretary',
                            'action' => 'edituserpatient', 'userid' => $a->UserId)); ?>">Edit</a></td>
-           <td><a style="text-decoration:underline; color:black;" onclick="<?php echo "conf('" . $this->url(array('controller' => 'secretary',
+           <td><a style="text-decoration:underline; color:black; cursor:pointer;" onclick="<?php echo "conf('" . $this->url(array('controller' => 'secretary',
                            'action' => 'deleteuserpatient', 'userid' => $a->UserId)) . "')"; ?>">Delete</a></td>
         </tr>                                        
     <?php  }

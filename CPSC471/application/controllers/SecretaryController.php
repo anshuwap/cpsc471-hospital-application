@@ -137,6 +137,8 @@ class SecretaryController extends Zend_Controller_Action {
 				$phone = $form->getValue('phone');
 				$section = $form->getValue('section');
 				$jobtitle = $form->getValue('jobtitle');
+				if ($pwd == "N/A" || $pwd == "")
+					$pwd = NULL;
 				if ($address == "N/A" || $address == "")
 					$address = NULL;
 				if($phone == "N/A" || $phone == "")
@@ -176,8 +178,10 @@ class SecretaryController extends Zend_Controller_Action {
 				$address = $form->getValue('address');
 				$phone = $form->getValue('phone');
 				$section = $form->getValue('section');
-				$del_specialty = $form->getValue('d_spec');
-				$add_specialty = $form->getValue('a_spec');
+				$del_specialty = $form->getValue('specialty');
+				$add_specialty = $form->getValue('addspecialty');
+				if ($pwd == "N/A" || $pwd == "")
+					$pwd = NULL;
 				if ($address == "N/A" || $address == "")
 					$address = NULL;
 				if($phone == "N/A" || $phone == "")
@@ -187,7 +191,7 @@ class SecretaryController extends Zend_Controller_Action {
 				if ($add_specialty == "" or $add_specialty == "N/A")
 					$add_specialty = NULL;
 				$user->editDoctor($userid, $pwd, $fname, $lname, $address, $phone, $section, $del_specialty, $add_specialty);
-				$sessionUser->successMessage = "User Edited Successfully!";
+				$sessionUser->successMessage = "User Edited Successfully";
 				$this->_helper->redirector('user', 'secretary');
 			}
 			else
@@ -215,6 +219,8 @@ class SecretaryController extends Zend_Controller_Action {
 				$address = $form->getValue('address');
 				$phone = $form->getValue('phone');
 				$pdoc = $form->getValue('pdoc');
+				if ($pwd == "N/A" || $pwd == "")
+					$pwd = NULL;
 				if ($address == "N/A" || $address == "")
 					$address = NULL;
 				if($phone == "N/A" || $phone == "")

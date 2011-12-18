@@ -152,15 +152,111 @@ class Default_Model_User extends Zend_Db_Table {
 	}
 	public function editSecretary($userid, $pwd, $fname, $lname, $address, $phone, $section, $jobtitle)
 	{
+		$data = array(
+		    'FName'            => $fname,
+		    'LName'            => $lname,
+		    'Adress'	       => $address,
+		    'PhoneNumber'	   => $phone,
+		 
+			);
+			
+		if(strcmp($pwd, NULL) != 0)
+		{
+			$data["Pwd"] = $pwd;
+		}
+		$where = $this->getAdapter()->quoteInto('UserId = ?', $userid);
+		$this->update($data, $where);
+			
 		
+		$data2 = array(
+			'Section'     => $section,
+			'JobTitle'	  => $jobtitle
+			);
+		
+		$table = new Default_Model_Secretary;
+		$where2 = $table->getAdapter()->quoteInto('SecretaryId = ?', $userid);
+		$table->update($data2, $where2);
 	}
 	public function editDoctor($userid, $pwd, $fname, $lname, $address, $phone, $section, $del_specialty, $add_specialty)
 	{
+		$data = array(
+		    'FName'            => $fname,
+		    'LName'            => $lname,
+		    'Adress'	       => $address,
+		    'PhoneNumber'	   => $phone,
+			);
 		
+		
+		if(strcmp($pwd, NULL) != 0)
+		{
+			$data["Pwd"] = $pwd;
+		}
+		
+		$where = $this->getAdapter()->quoteInto('UserId = ?', $userid);
+		
+		$this->update($data, $where);
+		
+		
+		$data2 = array(
+			'Section'  => $section,
+			);
+		
+		$table = new Default_Model_Doctor;
+		$where2 = $table->getAdapter()->quoteInto('DoctorId = ?', $userid);
+		$table->update($data2, $where2);
+		
+		
+		if(strcmp($add_specialty,NULL) != 0)
+		{
+			$data3 = array(
+			'DoctorId'	=> $userid,
+			'Speciality'  => $add_specialty,
+			);
+		
+			$table2 = new Default_Model_Specialty;
+			$table2->insert($data3);
+		}
+	 	foreach($del_specialty as $d => $value)
+		{
+			$table3 = new Default_Model_Specialty;
+			$where3[] = $table3->getAdapter()->quoteInto('DoctorId = ?', $userid);
+			$where3[] = $table3->getAdapter()->quoteInto('Speciality = ?', $value);
+							 
+			
+			$table3->delete($where3);
+			$where3 = "";
+		}
+	 
 	}
 	public function editUserPatient($userid, $pwd, $fname, $lname, $address, $phone, $pdoc)
 	{
+		$data = array(
+		    'FName'            => $fname,
+		    'LName'            => $lname,
+		    'Adress'	       => $address,
+		    'PhoneNumber'	   => $phone,
+			);
 		
+		if(strcmp($pwd, NULL) != 0)
+		{
+			$data["Pwd"] = $pwd;
+		}
+		
+		$where = $this->where('UserId = ?', $userid);
+		$this->update($data, $where);
+		
+		
+		$data2 = array(
+		    'FName'            => $fname,
+		    'LName'            => $lname,
+		    'Adress'	       => $address,
+		    'PhoneNumber'	   => $phone,
+		    'PreferedDoctor'   => $did,
+			);
+		
+		$table = new Default_Model_Patient;
+		$where2 = $table->where('PatientId = ?', $userid);
+		$table->update($data2, $where2);						
 	}
 	
 }

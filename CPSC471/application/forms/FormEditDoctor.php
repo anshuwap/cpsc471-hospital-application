@@ -3,12 +3,12 @@ class FormEditDoctor extends Zend_Form {
 
     public function __construct($userid, $u_fname, $u_lname, $u_address, $u_phone, $d_section, $d_specialty, $options = null) {
         parent::__construct($options);
-		try{
+		
         $this->setName('editdoctor');
 
 		$pwd = new Zend_Form_Element_Text('pwd');
         $pwd->setLabel('Password :');
-        $pwd->setRequired(true);
+      
 
         $fname = new Zend_Form_Element_Text('fname');
         $fname->setLabel('First Name:');
@@ -47,7 +47,7 @@ class FormEditDoctor extends Zend_Form {
        
 		$test = array();
         foreach($d_specialty as $s => $value){
-			$test[$s] = "Delete: " . $value->Speciality;
+			$test[$value->Speciality] = "Delete: " . $value->Speciality;
 			}
 		$d_spec = new Zend_Form_Element_MultiCheckbox('specialty', array(
        	'multiOptions' => $test
@@ -60,12 +60,8 @@ class FormEditDoctor extends Zend_Form {
 		
 		 $this->addElements(array($pwd, $fname, $lname, $address, $phone, $section, $a_spec, $d_spec, $submit));
 	
-		}
-		catch(Exception $e)
-		{
-			echo $e->getMessage();
-			echo print_r($d_specialty);
-		}
+		
+		
     }
 
 }
