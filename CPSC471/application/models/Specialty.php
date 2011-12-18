@@ -11,6 +11,10 @@ class Default_Model_Specialty extends Zend_Db_Table {
         //Zend_Debug::dump($select->__toString());
     }
     
+     public function findAllForADoctor($DoctorId) {
+        return $this->fetchAll('DoctorId = ' . $DoctorId );      
+    }
+    
 }
 
 ?>

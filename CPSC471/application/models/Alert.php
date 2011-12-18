@@ -16,6 +16,19 @@ class Default_Model_Alert extends Zend_Db_Table {
         
     }
     
+        public function findLastReceivedAlerts($userId) {
+  
+        $select = $this->select();
+        $select->setIntegrityCheck(false);
+        $select->from('alerts', 'alerts.*');
+        $select->join('user', 'user.UserId = alerts.SenderId');
+        $select->where('alerts.ReceiverId = ?', $userId);
+        $select->order(array('DateA DESC', 'TimeA DESC'));
+        $select->limit(1);
+        return $this->fetchAll($select);
+        
+    }
+    
     public function addAlert($senderId, $receiverId, $desc) {
         
         $row = $this->createRow();

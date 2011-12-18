@@ -58,6 +58,9 @@ class IndexController extends Zend_Controller_Action {
                         $sessionUser->MealId = $row->MealId;
                         
                         $this->_helper->redirector('index', 'patient');
+                        
+                    } else if ( strcmp($sessionUser->UserType,'DOCTOR') == 0 ) {
+                        $this->_helper->redirector('index', 'doctor');
                     }
 
                     $this->_helper->redirector('index', 'index');

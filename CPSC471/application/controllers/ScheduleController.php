@@ -7,16 +7,10 @@ class ScheduleController extends Zend_Controller_Action {
     public function indexAction() {          
     }
     
-      //Consultation du planning
     public function viewscheduleAction() {    
         $sessionUser = new Zend_Session_Namespace('sessionUser');
         $doctorId = $sessionUser->UserId;
         
-    //On commence par rechercher à quelle date on doit etre
-        //-soit par defaut:date du jour
-        //-soit par recherche
-        //-soit par plus ou moins
-
         $dateP = $this->_request->getParam('date');
         Zend_Loader::loadClass('FormSearchDate');
         $form = new FormSearchDate();
@@ -36,8 +30,6 @@ class ScheduleController extends Zend_Controller_Action {
             $date = $dateP;
         }
 
-
-        //On crée un tableau avec tous les horraires
         $Heure[0] = '00:00:00';
         $Heure[1] = '01:00:00';
         $Heure[2] = '02:00:00';
@@ -64,7 +56,7 @@ class ScheduleController extends Zend_Controller_Action {
         $Heure[23] = '23:00:00';
        
 
-        // on recupere toutes les lignes de la relation attribue
+
         $schedule= new Default_Model_schedule();
         $list = $schedule->ListDate($date);
         
@@ -73,7 +65,7 @@ class ScheduleController extends Zend_Controller_Action {
         $patient = array();
         $patientName = array();
         $nbrPatient = 0;
-        // on met dans un tableau tous les véhicules
+
         foreach ($list as $temp) :
             if (!in_array($temp->PatientId, $patient)) {
                 $patient[] = $temp->PatientId;
@@ -86,23 +78,31 @@ class ScheduleController extends Zend_Controller_Action {
         
         
         $res = array();
-        //on met dans un tableau à deux dimensions la ou il y a des attributions
+
         for ($i = 0; $i < $nbrPatient; $i = $i + 1) {
             for ($j = 0; $j < 24; $j = $j + 1) {
                 $H = $Heure[$j];
                 $res[$i][$j] = $schedule->Allocation($doctorId, $patient[$i], $date, $H);
             }
         }
+       
         
-
-        //On donne à la vue les tableaux et variables nécessaires
         $this->view->line = $nbrPatient;
         $this->view->patient = $patient;
         $this->view->patientname = $patientName;
         $this->view->date = $date;
         $this->view->tab = $res;
 
-
     }
+    
+    public function viewappointmentAction() {  
+        $ScheduleId = $this->_request->getParam('Sid');
+        
+        $schedule = new Default_Model_Schedule();
+        $res = $schedule->findAAppointment($ScheduleId);
+        
+        $this->view->app = $res;
+    }
+    
 }
 ?>

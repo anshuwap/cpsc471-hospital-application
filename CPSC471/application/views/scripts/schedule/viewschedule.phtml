@@ -75,7 +75,8 @@ $datemoins = dateMoins($this->date);
                                               <td>
             <?php
                                               if ($this->tab[$i][$j] != null) { ?>
-                                                  <?php echo $this->escape($this->tab[$i][$j]->RoomId); ?>
+                                                  <a href="<?php echo $this->url(array('controller' => 'schedule',
+                           'action' => 'viewappointment', 'Sid' => $this->tab[$i][$j]->Sid)); ?>">Infos</a>
 
                                                   
                                               <?php } else {

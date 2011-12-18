@@ -64,7 +64,7 @@
 	            break;
                 
             case "DOCTOR":   
-                $temp = $this->url(array('controller' => 'index', 'action' => 'index'), null, true);
+                $temp = $this->url(array('controller' => 'doctor', 'action' => 'index'), null, true);
                 $tab[] = '<a href="' . $temp . '" >Home</a>';
         
                 $temp = $this->url(array('controller' => 'schedule', 'action' => 'viewschedule'), null, true);
