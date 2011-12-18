@@ -3,9 +3,11 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 18, 2011 at 07:18 PM
+-- Generation Time: Dec 18, 2011 at 07:36 PM
 -- Server version: 5.5.8
 -- PHP Version: 5.3.3
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -42,20 +44,20 @@ INSERT INTO alerts (SenderId, ReceiverId, DateA, TimeA, Description) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table 'bedroom'
+-- Table structure for table 'bedroom1'
 --
 
-CREATE TABLE IF NOT EXISTS bedroom (
+CREATE TABLE IF NOT EXISTS bedroom1 (
   RoomId int(11) NOT NULL,
   NumberOfBed int(11) DEFAULT NULL,
   PRIMARY KEY (RoomId)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table 'bedroom'
+-- Dumping data for table 'bedroom1'
 --
 
-INSERT INTO bedroom (RoomId, NumberOfBed) VALUES
+INSERT INTO bedroom1 (RoomId, NumberOfBed) VALUES
 (1, 4);
 
 -- --------------------------------------------------------
@@ -425,9 +427,9 @@ ALTER TABLE `alerts`
   ADD CONSTRAINT ALERTS_ibfk_2 FOREIGN KEY (SenderId) REFERENCES `user` (UserId);
 
 --
--- Constraints for table `bedroom`
+-- Constraints for table `bedroom1`
 --
-ALTER TABLE `bedroom`
+ALTER TABLE `bedroom1`
   ADD CONSTRAINT BEDROOM_ibfk_1 FOREIGN KEY (RoomId) REFERENCES room (RoomId);
 
 --
@@ -500,4 +502,4 @@ ALTER TABLE `speciality`
 --
 ALTER TABLE `stay`
   ADD CONSTRAINT STAY_ibfk_1 FOREIGN KEY (PatientId) REFERENCES longtermpatient (PatientId),
-  ADD CONSTRAINT STAY_ibfk_2 FOREIGN KEY (BedRoomId) REFERENCES bedroom (RoomId);
+  ADD CONSTRAINT STAY_ibfk_2 FOREIGN KEY (BedRoomId) REFERENCES bedroom1 (RoomId);
