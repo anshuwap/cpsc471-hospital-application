@@ -1,0 +1,15 @@
+<?php $sessionUser = new Zend_Session_Namespace('sessionUser');
+if($sessionUser->successMessage != "")
+{
+	echo "<div class='successMessage' style='display:block'>" . $sessionUser->successMessage . "</div>";
+}
+$sessionUser->successMessage = "";
+
+ ?>
+
+<h2> <a href="<?php echo $this->url(array('controller' => 'secretary',
+                           'action' => 'addappointmnet')); ?>">Add</a>
+or <a href="<?php echo $this->url(array('controller' => 'secretary',
+                           'action' => 'searchappointment')); ?>">Edit</a>
+an Appointment?                        
+</h2>

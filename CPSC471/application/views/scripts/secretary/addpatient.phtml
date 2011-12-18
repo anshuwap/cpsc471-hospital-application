@@ -1,8 +1,14 @@
-<h2>Add A Patient:</h2>
-Enter the Patient's Information here:
+
 <?php
 	if ($this->errorMessage != "")
 		echo "<div class='errorMessage' style='display:block'>" . $this->errorMessage . "</div>";
 	$this->errorMessage = "";
+?>
+
+<h2>Add A Patient:</h2>
+Enter the Patient's Information here:
+
+<?php	
+	
     echo $this->form ;
 ?>

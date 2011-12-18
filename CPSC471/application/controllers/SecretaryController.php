@@ -9,6 +9,9 @@ class SecretaryController extends Zend_Controller_Action {
 	public function userAction(){
 		
 	}
+	public function appointmentAction(){
+		
+	}
 	public function addsecretaryAction(){
 		$sessionUser = new Zend_Session_Namespace('sessionUser');
 	

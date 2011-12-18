@@ -1,0 +1,40 @@
+<?php $sessionUser = new Zend_Session_Namespace('sessionUser'); ?>
+<h2>Search A Docotr:</h2>
+Search a user:
+<?php
+    echo $this->form ;
+	
+	if ($this->patientid == NULL)
+		$patientid = "0";
+	else
+		$patientid = $this->$patientid;
+	
+	if ($this->roomid == NULL)
+		$roomid = "0";
+	else
+		$roomid = $this->$roomid;
+	
+?>
+
+<table>
+    <tr>
+    	<th>Id</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Schedule?</th>
+
+    </tr>
+    <?php foreach ($this->allusers as $a) : 
+    	if (strcmp(strtoupper($a->UserType),"DOCTOR") == 0){?>
+        
+        <tr>
+           <td><?php echo $this->escape($a->UserId); ?> </td>  
+           <td><?php echo $this->escape($a->LName); ?> <?php echo $this->escape($a->FName);?> </td>
+           <td><?php echo $this->escape($a->UserType); ?></td>
+           <td><a style="color:black;" href="<?php echo $this->url(array('controller' => 'secretary',
+                           'action' => 'addapointment', 'patientid' => $patientid, 'doctorid' => $a->$UserId, 'roomid' => $roomid)); ?>">Schedule</a></td>
+         
+        </tr>                                        
+    <?php  }
+    endforeach; ?>
+</table>
