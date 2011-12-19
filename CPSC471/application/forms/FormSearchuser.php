@@ -1,4 +1,4 @@
-//<?php
+<?php
 
 class FormSearchuser extends Zend_Form {
 
