@@ -1,31 +1,57 @@
-<?php $sessionUser = new Zend_Session_Namespace('sessionUser'); ?>
-<h2>Search A Docotr:</h2>
-Search a user:
+<h1>
+    Pick a Doctor
+</h1>
+
+
 <?php
-    
-	$patient= $this->$patient;
-	$pdoc = $this->$doctor;
-	$day = $this->$day;
-	$ptype = $this->$ptype;
-	
+
+function datePlus($dateDo) {
+    date_default_timezone_set('UTC');
+    $timeStamp = strtotime($dateDo);
+    $timeStamp += 24 * 60 * 60;
+    $newDate = date("Y-m-d", $timeStamp);
+    return $newDate;
+}
+
+function dateMoins($dateDo) {
+    date_default_timezone_set('UTC');
+    $timeStamp = strtotime($dateDo);
+    $timeStamp -= 24 * 60 * 60;
+    $newDate = date("Y-m-d", $timeStamp);
+    return $newDate;
+}
+
+$dateplus = datePlus($this->date);
+$datemoins = dateMoins($this->date);
+$doctors = $this->doctors;
+$patient = $this->patient->PatientId;
+$pdoc = $this->pdoc;
+//echo "pdoc is: " . print_r($pdoc);
+
+?>
+
+<div id="date_affiche"> <a href="<?php echo $this->url(array('controller' => 'appointment',
+    'action' => 'doctorappointment', 'date' => $datemoins)); ?>">&lt;--</a>
+                                  <?php echo $this->date; ?>
+    <a href="<?php echo $this->url(array('controller' => 'appointment',
+                                      'action' => 'doctorappointment', 'date' => $dateplus)); ?>">--&gt;</a>
+ </div>
+ 
+<div><br/></div>
+
+<?php
+
 	if($pdoc != NULL){
 ?>
 
-<h2><?php echo "Preferred Doctor (". $pdoc->FName . " " . $pdoc->LName .") Availability for " . $pdoc->day; ?></h2>
+<h2><?php echo "Preferred Doctor (". $pdoc->FName . " " . $pdoc->LName .") Availability for " . $this->date ?></h2>
 <table>
 	
  
 
   	<tr>
                              
-                                      <th>12am</th>
-                                      <th>1am</th>
-                                      <th>2am</th>
-                                      <th>3am</th>
-                                      <th>4am</th>
-                                      <th>5am</th>
-                                      <th>6am</th>
-                                      <th>7am</th>
+                          
                                       <th>8am</th>
                                       <th>9am</th>
                                       <th>10am</th>
@@ -48,13 +74,13 @@ Search a user:
 
                                           <tr>
                                              
-        <?php for ($j = 0; $j < 24; $j++) {
+        <?php for ($j = 8; $j < 24; $j++) {
  ?>
                                               <td>
             <?php
                                               if ($this->tab[$pdoc->UserId][$j] == null) { ?>
                                                   <a href="<?php echo $this->url(array('controller' => 'schedule',
-                           'action' => 'roomappointment', 'doctorid' => $pdoc->UserId, 'hour'=>$j, 'ptype' => $ptype)); ?>">Free</a>
+                           'action' => 'roomappointment', 'doctorid' => $pdoc->UserId, 'hour'=>$j, 'patient' => $patient)); ?>">Free</a>
 
                                                   
                                               <?php } else {
@@ -69,22 +95,14 @@ Search a user:
 
 <?php
 } // end if
-	echo $this->form ;
-	
 ?>
+<h2>All Doctors:</h3>
 
 <table>
     	<tr>
                              		  <th>Doctor ID</th>
                              		  <th>Doctor Name</th>
-                                      <th>12am</th>
-                                      <th>1am</th>
-                                      <th>2am</th>
-                                      <th>3am</th>
-                                      <th>4am</th>
-                                      <th>5am</th>
-                                      <th>6am</th>
-                                      <th>7am</th>
+                                     
                                       <th>8am</th>
                                       <th>9am</th>
                                       <th>10am</th>
@@ -112,14 +130,14 @@ Search a user:
                                           	<td><?php echo $a->UserId; ?></td>
                                           	<td><?php echo $a->LName . " " . $a->FName;?></td>
                                              
-        <?php for ($j = 0; $j < 24; $j++) {
+        <?php for ($j = 8; $j < 24; $j++) {
  ?>
                                               <td>
             <?php
                                               if ($this->tab[$a->UserId][$j] == null) { ?>
                                                   <a href="<?php echo $this->url(array('controller' => 'schedule',
-                           'action' => 'roomappointment', 'doctorid' => $a->UserId, 'hour'=>$j, 'ptype' => $ptype)); ?>">Free</a>
-
+                           'action' => 'roomappointment', 'doctorid' => $a->UserId, 'hour'=>$j, 'patient' => $patient)); ?>">Free</a>
+												
                                                   
                                               <?php } //end if
                                               else {
@@ -136,3 +154,7 @@ Search a user:
     <?php  } //end if 
     endforeach; //end for each ?>
 </table>
+
+<div id="Recherche">
+<?php echo $this->form ;?>
+</div>

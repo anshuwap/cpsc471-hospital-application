@@ -10,6 +10,13 @@ class Default_Model_Schedule extends Zend_Db_Table {
                     ->where('DateS = ? ' ,$date)
                     ->where('DoctorId = ? ' ,$id));
     }
+	public function ListDateAll($date) {
+
+        return $this->fetchAll(
+                $this->select()
+                    ->where('DateS = ? ' ,$date));
+    }
+	
 
     //Trouve s'il y a une association
     public function Allocation($DoctorId, $PatientId, $DateS, $Hour) {
@@ -21,6 +28,16 @@ class Default_Model_Schedule extends Zend_Db_Table {
                     ->where('BeginTime <= ? ', $Hour)
                     ->where('EndTime > ? ', $Hour));
     }
+	
+	public function Allocation2($DoctorId, $DateS, $Hour) {
+        return $this->fetchrow(
+                       $this -> select()
+                    ->where('DoctorId = ? ', $DoctorId)   
+                    ->where('DateS = ? ', $DateS)
+                    ->where('BeginTime <= ? ', $Hour)
+                    ->where('EndTime > ? ', $Hour));
+    }
+    
     
         public function findAAppointment($Sid) {
             

@@ -1,5 +1,5 @@
 <?php $sessionUser = new Zend_Session_Namespace('sessionUser'); ?>
-<h2>Search For A Patient:</h2>
+<h2>First</h2>
 Search a Patient:
 <?php
     echo $this->form ;
@@ -19,8 +19,8 @@ Search a Patient:
            <td><?php echo $this->escape($a->PatientId); ?> </td>  
            <td><?php echo $this->escape($a->LName); ?> <?php echo $this->escape($a->FName);?> </td>
            <td><?php echo $this->escape($a->PatientType); ?></td>
-           <td><a style="color:black;" href="<?php echo $this->url(array('controller' => 'secretary',
-                           'action' => 'addappointment', 'patientid' => $a->PatientId, 'type' => $a->PatientType)); ?>">Schedule</a></td>
+           <td><a style="color:black;" href="<?php echo $this->url(array('controller' => 'appointment',
+                           'action' => 'doctorappointment', 'patientid' => $a->PatientId)); ?>">Schedule</a></td>
 
         </tr>                                        
     <?php  endforeach; ?>

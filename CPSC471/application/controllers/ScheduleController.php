@@ -56,7 +56,7 @@ class ScheduleController extends Zend_Controller_Action {
        
 
 
-        $schedule= new Default_Model_schedule();
+        $schedule= new Default_Model_Schedule();
         $list = $schedule->ListDate($date, $doctorId);
         
         $patientmodel = new Default_Model_Patient();
