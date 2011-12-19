@@ -63,6 +63,18 @@ class AlertController extends Zend_Controller_Action {
             $this->view->allusers = $users->findAllUsers();
         }
     }
+    
+    public function deletealertAction() {
+        $receiverId = $this->_request->getParam('receiverid');
+        $senderId = $this->_request->getParam('senderid');
+        $time = $this->_request->getParam('time');
+        
+        $alert = new Default_Model_Alert();
+        $res = $alert->deleteAlert($senderId, $receiverId, $time);
+        
+        $this->_helper->redirector('viewreceivedalerts', 'alert');
+       
+    }
 
 }
 

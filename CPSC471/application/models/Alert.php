@@ -40,6 +40,12 @@ class Default_Model_Alert extends Zend_Db_Table {
         $row->save();
     }
     
+    public function deleteAlert($senderId, $receiverId, $time) {
+        $where = 'SenderId = ' . $senderId. ' and ReceiverId = '. $receiverId .
+                ' and TimeA = \''. $time.'\'';
+        $this->delete($where);
+    }
+    
 }
 
 ?>

@@ -11,11 +11,12 @@
     <b>Job Title: </b> <?php echo $this->secretary->JobTitle;?><br>
     
     <h2>Your Last Alerts : </h2>
-    <table>
+<table>
     <tr>
         <th>From </th>
         <th>Date</th>
         <th>Description</th>
+        <th>&nbsp</th>
         <th>&nbsp</th>
     </tr>
     <?php foreach ($this->lastalerts as $a) : ?>
@@ -25,9 +26,11 @@
            <td><?php echo $this->escape($a->Description); ?></td>
            <td><a href="<?php echo $this->url(array('controller' => 'alert',
                            'action' => 'sendalert', 'receiverid' => $a->SenderId, 'receivername' => $a->LName.' '.$a->FName)); ?>">Reply</a></td>
+           <td><a href="<?php echo $this->url(array('controller' => 'alert',
+                           'action' => 'deletealert', 'receiverid' => $a->ReceiverId, 'senderid' => $a->SenderId, 'time' => $a->TimeA)); ?>">Delete</a></td>
         </tr>                                        
     <?php endforeach; ?>
 </table>
-    
+
     
     </div>

@@ -38,14 +38,6 @@ $datemoins = dateMoins($this->date);
 
   <tr>
                                    <th>Patient's Name</th>
-                                      <th>12am</th>
-                                      <th>1am</th>
-                                      <th>2am</th>
-                                      <th>3am</th>
-                                      <th>4am</th>
-                                      <th>5am</th>
-                                      <th>6am</th>
-                                      <th>7am</th>
                                       <th>8am</th>
                                       <th>9am</th>
                                       <th>10am</th>
@@ -70,7 +62,7 @@ $datemoins = dateMoins($this->date);
     ?>
                                           <tr>
                                               <td><?php echo $this->patientname[$i]; ?></td>
-        <?php for ($j = 0; $j < 24; $j++) {
+        <?php for ($j = 0; $j < 16; $j++) {
  ?>
                                               <td>
             <?php
