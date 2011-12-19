@@ -1,0 +1,78 @@
+<?php $sessionUser = new Zend_Session_Namespace('sessionUser'); ?>
+<h2>Search A Docotr:</h2>
+Search a user:
+<?php
+    
+	$patient= $this->$patient;
+	$pdoc = $this->$doctor;
+	$day = $this->$day;
+	
+	
+
+	echo $this->form ;
+	
+?>
+
+<table>
+    	<tr>
+                             		  <th>Doctor ID</th>
+                             		  <th>Doctor Name</th>
+                                      <th>12am</th>
+                                      <th>1am</th>
+                                      <th>2am</th>
+                                      <th>3am</th>
+                                      <th>4am</th>
+                                      <th>5am</th>
+                                      <th>6am</th>
+                                      <th>7am</th>
+                                      <th>8am</th>
+                                      <th>9am</th>
+                                      <th>10am</th>
+                                      <th>11am</th>
+                                      <th>12pm</th>
+                                      <th>1pm</th>
+                                      <th>2pm</th>
+                                      <th>3pm</th>
+                                      <th>4pm</th>
+                                      <th>5pm</th>
+                                      <th>6pm</th>
+                                      <th>7pm</th>
+                                      <th>8pm</th>
+                                      <th>9pm</th>
+                                      <th>10pm</th>
+                                      <th>11pm</th>
+                              
+         
+                                  </tr>
+   
+    <?php foreach ($this->allusers as $a) : 
+    	if (strcmp(strtoupper($a->UserType),"DOCTOR") == 0){?>
+        
+                                          <tr>
+                                          	<td><?php echo $a->UserId; ?></td>
+                                          	<td><?php echo $a->LName . " " . $a->FName;?></td>
+                                             
+        <?php for ($j = 0; $j < 24; $j++) {
+ ?>
+                                              <td>
+            <?php
+                                              if ($this->tab[$a->UserId][$j] == null) { ?>
+                                                  <a href="<?php echo $this->url(array('controller' => 'schedule',
+                           'action' => 'roomappointment', 'doctorid' => $a->UserId, 'hour'=>$j)); ?>">Free</a>
+
+                                                  
+                                              <?php } //end if
+                                              else {
+                                                  echo 'Booked';
+                                              } //end else
+            ?>
+                                              </td>
+    <?php }  //end for ?>
+                                          </tr>
+        
+        
+        
+     
+    <?php  } //end if 
+    endforeach; //end for each ?>
+</table>

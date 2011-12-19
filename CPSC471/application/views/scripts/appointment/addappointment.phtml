@@ -1,0 +1,23 @@
+
+<?php
+	if ($this->errorMessage != "")
+		echo "<div class='errorMessage' style='display:block'>" . $this->errorMessage . "</div>";
+	$this->errorMessage = "";
+	if ($this->patientid == NULL)
+		$patientid = "0";
+	else
+		$patientid = $this->$patientid;
+		
+		
+?>
+
+<h2>Add An Appointment:</h2>
+Enter the Appointment Information here:
+
+
+<a style="color:black;" href="<?php echo $this->url(array('controller' => 'secretary',
+                           'action' => 'patientappointment')); ?> ">Find A Patient</a>
+
+<?php	
+    echo $this->form ;
+?>
