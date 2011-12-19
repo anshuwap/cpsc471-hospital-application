@@ -133,6 +133,7 @@ class SecretaryController extends Zend_Controller_Action {
 	public function editsecretaryAction(){
 		$sessionUser = new Zend_Session_Namespace('sessionUser');
 		$userid = $this->_request->getParam('userid');
+                
 		$user = new Default_Model_User();
 		Zend_Loader::loadClass('FormEditSecretary');
 		$p = $user->findSecretaryWithId($userid);
@@ -219,7 +220,9 @@ class SecretaryController extends Zend_Controller_Action {
 		$user = new Default_Model_User();
 		Zend_Loader::loadClass('FormEditUserPatient');
 		$p = $user->findUserPatientWithId($userid);
+       
 		$this->view->userid = $userid;
+     
 		$form = new FormEditUserPatient($userid, $p->FName, $p->LName, $p->Adress, $p->PhoneNumber, $p->PreferedDoctor);
 		$this->view->form = $form;
 		$this->view->errorMessage = "";

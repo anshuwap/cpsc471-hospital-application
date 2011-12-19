@@ -116,9 +116,9 @@ class Default_Model_User extends Zend_Db_Table {
 	public function findSecretaryWithId($userid)
 	{
 		//$this->fetchRow("UserId =".$userid);
-		$select = $this->select()
-        ->from(array('u' => 'USER'))
-        ->join(array('s' => 'SECRETARY'), 's.SecretaryId = u.UserId')
+	$select = $this->select()
+        ->from(array('u' => 'user'))
+        ->join(array('s' => 'secretary'), 's.SecretaryId = u.UserId')
         ->where('UserId = ? ' ,$userid);
 		$select->setIntegrityCheck(false);
 		
@@ -128,14 +128,14 @@ class Default_Model_User extends Zend_Db_Table {
 	public function findDoctorWithId($userid)
 	{
 		$select = $this->select()
-        ->from(array('u' => 'USER'))
-        ->join(array('d' => 'DOCTOR'), 'd.DoctorId = u.UserId')
+        ->from(array('u' => 'user'))
+        ->join(array('d' => 'doctor'), 'd.DoctorId = u.UserId')
         ->where('UserId = ? ' ,$userid);
 		$select->setIntegrityCheck(false);
 		$one = $this->fetchRow($select);
 		
 		$select2 = $this->select()
-		->from(array('s' => 'SPECIALITY'))
+		->from(array('s' => 'speciality'))
         ->where('DoctorId = ? ' ,$userid);
 		$select2->setIntegrityCheck(false);
         $two = $this->fetchAll($select2);
@@ -144,8 +144,8 @@ class Default_Model_User extends Zend_Db_Table {
 	public function findUserPatientWithId($userid)
 	{
 		$select = $this->select()
-        ->from(array('u' => 'USER'))
-        ->join(array('p' => 'PATIENT'), 'p.PatientId = u.UserId', array("PreferedDoctor"))
+        ->from(array('u' => 'user'))
+        ->join(array('p' => 'patient'), 'p.PatientId = u.UserId', array("PreferedDoctor"))
         ->where('UserId = ? ' ,$userid);
 		$select->setIntegrityCheck(false);
 		return $this->fetchRow($select);
