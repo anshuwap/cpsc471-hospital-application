@@ -1,0 +1,35 @@
+<?php $sessionUser = new Zend_Session_Namespace('sessionUser'); ?>
+<h2>Confirm the Appointment:</h2>
+<?php
+
+	$pid = $this->pid;
+	$did = $this->did;
+	$rid = $this->rid;
+	$patientname = $this->patientname;
+	$doctorname = $this->doctorname;
+	$btime = $this->btime;
+	$etime = $this->etime;
+	$roomnum = $this->roomnum;
+	$floornum = $this->floornum;
+	$adate = $this->adate;
+	
+	
+	echo "Appointment Details:";
+	echo "<br/>Patient Name: " . $patientname;
+	echo "<br/>Doctor Name: " . $doctorname;
+	echo "<br/>Date: " . $adate;
+	echo "<br/>Time: " . $btime . " to " . $etime;
+	echo "<br/>Room: " . $roomnum;
+	echo "<br/>Floor " . $floornum;
+	echo "<br/>To confirm these details, click "; ?> 
+	<a href="<?php echo $this->url(array('controller' => 'appointment',
+                           'action' => 'confirmappointment', 'confirm'=>"true")); ?>">here</a>
+   	<?php
+   	echo "<br/>Otherwise, to cancel, click "; ?>
+   	<a href="<?php echo $this->url(array('controller' => 'appointment',
+                           'action' => 'appointment'), null, true); ?>">here</a>
+   	
+
+
+
+

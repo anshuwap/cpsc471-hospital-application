@@ -79,8 +79,8 @@ $pdoc = $this->pdoc;
                                               <td>
             <?php
                                               if ($this->tab[$pdoc->UserId][$j] == null) { ?>
-                                                  <a href="<?php echo $this->url(array('controller' => 'schedule',
-                           'action' => 'roomappointment', 'doctorid' => $pdoc->UserId, 'hour'=>$j, 'patient' => $patient)); ?>">Free</a>
+                                                  <a href="<?php echo $this->url(array('controller' => 'appointment',
+                           'action' => 'roomappointment', 'doctorid' => $pdoc->UserId, 'hour'=>$j)); ?>">Free</a>
 
                                                   
                                               <?php } else {
@@ -135,8 +135,8 @@ $pdoc = $this->pdoc;
                                               <td>
             <?php
                                               if ($this->tab[$a->UserId][$j] == null) { ?>
-                                                  <a href="<?php echo $this->url(array('controller' => 'schedule',
-                           'action' => 'roomappointment', 'doctorid' => $a->UserId, 'hour'=>$j, 'patient' => $patient)); ?>">Free</a>
+                                                  <a href="<?php echo $this->url(array('controller' => 'appointment',
+                           'action' => 'roomappointment', 'doctorid' => $a->UserId, 'hour'=>$j)); ?>">Free</a>
 												
                                                   
                                               <?php } //end if

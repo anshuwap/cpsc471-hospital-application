@@ -63,5 +63,19 @@ class Default_Model_Schedule extends Zend_Db_Table {
         $select->limit(1);
         return $this->fetchrow($select);
     }
+	public function addAppointment($did, $pid, $rid,  $date, $btime, $etime)
+	{
+		$data = array(
+			'DoctorId'     => $did,
+		    'PatientId'    => $pid,
+		    'RoomId'       => $rid,
+		    'DateS'	       => $date,
+		    'BeginTime'	   => $btime,
+		    'EndTime'      => $etime
+			);
+		$this->insert($data);
+		
+						
+	}
 }
 ?>

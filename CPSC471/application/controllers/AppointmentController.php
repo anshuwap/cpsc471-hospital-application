@@ -10,6 +10,52 @@ class AppointmentController extends Zend_Controller_Action {
 	public function appointmentAction(){
 		
 	}
+	public function confirmappointmentAction(){
+		
+		$sessionUser = new Zend_Session_Namespace('sessionUser');
+		$confirm = $this->_request->getParam('confirm');
+		$pid = $this->_request->getParam('patientid');	
+			$did = $this->_request->getParam('doctorid');
+			$hour = $this->_request->getParam('hour');
+			$date = $this->_request->getParam('date');
+			$rid = $this->_request->getParam('roomid');
+			$hour1 = (string)$hour . ":00";
+			$hour2 = (string)($hour + 1) . ":00";
+		if ($confirm == "true")
+		{
+			$s = new Default_Model_Schedule();
+			$s->addAppointment($did, $pid, $rid, $date, $hour1, $hour2);
+			$sessionUser->successMessage = "Appointment Successfully Booked!";
+			$this->_helper->redirector('appointment', 'appointment');
+			
+		}
+		else{
+			
+			$user = new Default_Model_User();
+			$room = new Default_Model_Room();
+			$pat = new Default_Model_Patient();
+			$r = $room->findRoomById($rid);
+			$roomnum = $r->Number;
+			$floornum = $r->Floor;
+			$doctor = $user->findUser($did);
+			$dname = $doctor->FName . " " . $doctor->LName;
+			$patient = $pat->findPatientWithId($pid);
+			$pname = $patient->FName . " " . $patient->LName;
+			
+			$this->view->pid = $pid;
+			$this->view->did = $did;
+			$this->view->rid = $rid;
+			$this->view->patientname = $pname;
+			$this->view->doctorname = $dname;
+			$this->view->btime = $hour1;
+			$this->view->etime = $hour2;
+			$this->view->roomnum = $roomnum;
+			$this->view->floornum = $floornum;
+			$this->view->adate = $date;
+			
+			}
+		
+	}
 	public function patientappointmentAction(){
 		$sessionUser = new Zend_Session_Namespace('sessionUser');
 		
@@ -32,7 +78,31 @@ class AppointmentController extends Zend_Controller_Action {
         }
 	}
 	public function roomappointmentAction(){
+		try{
+		$sessionUser = new Zend_Session_Namespace('sessionUser');
 		
+	
+
+        $room = new Default_Model_Room();
+        $this->view->allrooms = null;
+
+        Zend_Loader::loadClass('FormSearchRoom');
+        $form = new FormSearchRoom();
+        $this->view->form = $form;
+        if ($this->_request->isPost()) {
+            $formData = $this->_request->getPost();
+            if ($form->isValid($formData)) {
+                $floor = $form->getValue('Floor');
+                $this->view->allrooms = $room->findRoomByFloor($floor);
+            }
+        } else {
+            $this->view->allrooms = $room->findAllRooms();
+        }
+		}
+		catch(Exception $e)
+		{
+			$this->view->error = $e->getMessage();
+		}
 	}
 	public function searchappointmentAction(){
 		

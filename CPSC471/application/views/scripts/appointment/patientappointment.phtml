@@ -3,6 +3,8 @@
 Search a Patient:
 <?php
     echo $this->form ;
+	date_default_timezone_set('UTC');
+    $date = date("Y-m-d"); //Date du jour
 ?>
 
 <table>
@@ -20,7 +22,7 @@ Search a Patient:
            <td><?php echo $this->escape($a->LName); ?> <?php echo $this->escape($a->FName);?> </td>
            <td><?php echo $this->escape($a->PatientType); ?></td>
            <td><a style="color:black;" href="<?php echo $this->url(array('controller' => 'appointment',
-                           'action' => 'doctorappointment', 'patientid' => $a->PatientId)); ?>">Schedule</a></td>
+                           'action' => 'doctorappointment', 'patientid' => $a->PatientId, 'date'=>$date)); ?>">Schedule</a></td>
 
         </tr>                                        
     <?php  endforeach; ?>
