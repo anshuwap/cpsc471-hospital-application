@@ -9,7 +9,14 @@ class ScheduleController extends Zend_Controller_Action {
     
     public function viewscheduleAction() {    
         $sessionUser = new Zend_Session_Namespace('sessionUser');
-        $doctorId = $sessionUser->UserId;
+        
+        $id = $this->_request->getParam('doctorid');
+        
+        if ( $id ==null ) {
+            $doctorId = $sessionUser->UserId;
+        } else {
+            $doctorId = $id;
+        }
         
         $dateP = $this->_request->getParam('date');
         Zend_Loader::loadClass('FormSearchDate');
@@ -58,7 +65,7 @@ class ScheduleController extends Zend_Controller_Action {
 
 
         $schedule= new Default_Model_schedule();
-        $list = $schedule->ListDate($date);
+        $list = $schedule->ListDate($date, $doctorId);
         
         $patientmodel = new Default_Model_Patient();
 

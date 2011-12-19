@@ -24,25 +24,25 @@
         /** User Buttons **/
         switch ($sessionUser->UserType) {
             case "SECRETARY":
-                $temp = $this->url(array('controller' => 'index', 'action' => 'index'), null, true);
+                $temp = $this->url(array('controller' => 'secretary', 'action' => 'index'), null, true);
                 $tab[] = '<a href="' . $temp . '" >Home</a>';
         
-                $temp = $this->url(array('controller' => 'index', 'action' => 'index'), null, true);
+                $temp = $this->url(array('controller' => 'alert', 'action' => 'viewreceivedalerts'), null, true);
 	       	    $tab[] = '<a href="' . $temp . '" >Alerts</a>';
                 
                 $temp = $this->url(array('controller' => 'secretary', 'action' => 'appointment'), null, true);
                 $tab[] = '<a href="' . $temp . '" >Appointments</a>';
                    
-                $temp = $this->url(array('controller' => 'index', 'action' => 'index'), null, true);
+                $temp = $this->url(array('controller' => 'secretary', 'action' => 'doctor'), null, true);
                 $tab[] = '<a href="' . $temp . '" >Doctor</a>';
                             
                 $temp = $this->url(array('controller' => 'secretary', 'action' => 'patient'), null, true);
                 $tab[] = '<a href="' . $temp . '" > Patient</a>';
                 
-                $temp = $this->url(array('controller' => 'index', 'action' => 'index'), null, true);
+                $temp = $this->url(array('controller' => 'patientfile', 'action' => 'browsepatientfile'), null, true);
                 $tab[] = '<a href="' . $temp . '" >Patients File</a>';
                 
-                $temp = $this->url(array('controller' => 'index', 'action' => 'index'), null, true);
+                $temp = $this->url(array('controller' => 'secretary', 'action' => 'mealplan'), null, true);
                 $tab[] = '<a href="' . $temp . '" >Meal Plan</a>';
                 
                 $temp = $this->url(array('controller' => 'secretary', 'action' => 'user'), null, true);

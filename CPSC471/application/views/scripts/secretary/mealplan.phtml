@@ -1,0 +1,36 @@
+<a href="<?php echo $this->url(array('controller' => 'secretary',
+                       'action' => 'createmealplan')); ?>">Create a Meal Plan</a>
+<h2>Meal Plans :</h2>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Type</th>
+        <th>Sunday</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+        
+    </tr>
+    <?php foreach ($this->mealPlans as $mp) : ?>
+        <tr>
+           <td><?php echo $this->escape($mp->MealId); ?></td>
+           <td><?php echo $this->escape($mp->Type); ?></td>
+           <td><?php echo $this->escape($mp->Sunday); ?></td>
+           <td><?php echo $this->escape($mp->Monday); ?></td>
+           <td><?php echo $this->escape($mp->Tuesday); ?></td>
+           <td><?php echo $this->escape($mp->Wednesday); ?></td>
+           <td><?php echo $this->escape($mp->Thursday); ?></td>
+           <td><?php echo $this->escape($mp->Friday); ?></td>
+           <td><?php echo $this->escape($mp->Saturday); ?></td>    
+           <td><a href="<?php echo $this->url(array('controller' => 'secretary',
+                           'action' => 'editmealplan', 'mealid' => $mp->MealId)); ?>">Edit</a>
+           <td><a href="<?php echo $this->url(array('controller' => 'secretary',
+                           'action' => 'deletemealplan', 'mealid' => $mp->MealId)); ?>">Delete</a>
+        </tr>
+    <?php endforeach; ?>
+</table>

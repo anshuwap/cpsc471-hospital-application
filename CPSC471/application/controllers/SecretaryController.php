@@ -3,7 +3,17 @@
 class SecretaryController extends Zend_Controller_Action {
     
     public function indexAction() {
-    
+        $sessionUser = new Zend_Session_Namespace('sessionUser');
+        
+        $secretarymodel = new Default_Model_Secretary();
+        $secretary = $secretarymodel->findASecretary($sessionUser->UserId);
+         
+        $this->view->secretary = $secretary;
+                
+        $alertsmodel = new Default_Model_Alert();
+        $lastalerts = $alertsmodel->findLastReceivedAlerts($sessionUser->UserId);
+         
+        $this->view->lastalerts = $lastalerts;    
     }
 	
 	public function userAction(){
@@ -421,9 +431,86 @@ class SecretaryController extends Zend_Controller_Action {
             $this->view->allpatients = $patients->findAllPatients();
         }
 	}
+        
+        public function mealplanAction() {
+            
+        //Show all meal plans
+        $mealPlan = new Default_Model_MealPlan();
+        $this->view->mealPlans = $mealPlan->mealPlans();
+        }
+        
+        public function editmealplanAction() {
+        $mealid = $this->_request->getParam('mealid');
+            
+        $mealplan = new Default_Model_MealPlan();
+        Zend_Loader::loadClass('FormMealPlan');
+        
+        $m = $mealplan->findMealPlan($mealid);
+        
+        $form = new FormMealPlan($m);
+        
+        $this->view->form = $form;
+        if ($this->_request->isPost()) {
+            $formData = $this->_request->getPost();
+            if ($form->isValid($formData)) {
+                $type = $form->getValue('type');
+                $sunday = $form->getValue('sunday');
+                $monday = $form->getValue('monday');
+                $tuesday = $form->getValue('tuesday');
+                $wednesday = $form->getValue('wednesday');
+                $thursday = $form->getValue('thursday');
+                $friday = $form->getValue('friday');
+                $saturday = $form->getValue('saturday');
+                
+                $mealplan->editMealPlan($mealid, $type, $sunday, $monday, $tuesday, $wednesday, $thursday, $friday, $saturday);
+                $this->_helper->redirector('mealplan', 'secretary');
+            }
+          }            
+        }
+        
+        public function createmealplanAction() {
+        Zend_Loader::loadClass('FormMealPlan');
+        $mealplan = new Default_Model_MealPlan();
+        
+        $form = new FormMealPlan();
+        
+        $this->view->form = $form;
+        if ($this->_request->isPost()) {
+            $formData = $this->_request->getPost();
+            if ($form->isValid($formData)) {
+                $type = $form->getValue('type');
+                $sunday = $form->getValue('sunday');
+                $monday = $form->getValue('monday');
+                $tuesday = $form->getValue('tuesday');
+                $wednesday = $form->getValue('wednesday');
+                $thursday = $form->getValue('thursday');
+                $friday = $form->getValue('friday');
+                $saturday = $form->getValue('saturday');
+                
+                $mealplan->createMealPlan($type, $sunday, $monday, $tuesday, $wednesday, $thursday, $friday, $saturday);
+                $this->_helper->redirector('mealplan', 'secretary');
+            }
+          }    
+            
+        }
+        
+        public function deletemealplanAction() {
+            
+             $mealid = $this->_request->getParam('mealid');
+             $mealplan = new Default_Model_MealPlan();
+             
+             $res = $mealplan->deleteMealPlan($mealid);
+             
+             $this->_helper->redirector('mealplan', 'secretary');
+        }
    
     
-    
+        public function doctorAction() {
+            $doctormodel = new Default_Model_Doctor();
+            $doctors = $doctormodel->findAllDoctor();
+            
+            $this->view->doctors = $doctors;
+        }
 }
     
 ?>

@@ -3,11 +3,12 @@ class Default_Model_Schedule extends Zend_Db_Table {
 
     protected $_name = 'schedule';
 
-    public function ListDate($date) {
+    public function ListDate($date, $id) {
 
         return $this->fetchAll(
                 $this->select()
-                    ->where('DateS = ? ' ,$date));
+                    ->where('DateS = ? ' ,$date)
+                    ->where('DoctorId = ? ' ,$id));
     }
 
     //Trouve s'il y a une association

@@ -1,0 +1,33 @@
+<?php $sessionUser = new Zend_Session_Namespace('sessionUser'); ?>
+    
+    <div>
+    <h2>Your Informations : </h2>
+    <b>User Id: </b><?php echo $sessionUser->UserId;?><br>
+    <b>First Name: </b><?php echo $sessionUser->FName;?><br>
+    <b>Last Name: </b><?php echo $sessionUser->LName;?><br>
+    <b>Adress: </b><?php echo $sessionUser->Adress;?><br>
+    <b>Phone Number: </b><?php echo $sessionUser->PhoneNumber;?><br>
+    <b>Section: </b><?php echo $this->secretary->Section;?><br>
+    <b>Job Title: </b> <?php echo $this->secretary->JobTitle;?><br>
+    
+    <h2>Your Last Alerts : </h2>
+    <table>
+    <tr>
+        <th>From </th>
+        <th>Date</th>
+        <th>Description</th>
+        <th>&nbsp</th>
+    </tr>
+    <?php foreach ($this->lastalerts as $a) : ?>
+        <tr>
+           <td><?php echo $this->escape($a->LName); ?> <?php echo $this->escape($a->FName);?> (<?php echo $this->escape($a->UserType);?>)</td>
+           <td><?php echo $this->escape($a->DateA); ?> (<?php echo $this->escape($a->TimeA); ?>)</td>  
+           <td><?php echo $this->escape($a->Description); ?></td>
+           <td><a href="<?php echo $this->url(array('controller' => 'alert',
+                           'action' => 'sendalert', 'receiverid' => $a->SenderId, 'receivername' => $a->LName.' '.$a->FName)); ?>">Reply</a></td>
+        </tr>                                        
+    <?php endforeach; ?>
+</table>
+    
+    
+    </div>

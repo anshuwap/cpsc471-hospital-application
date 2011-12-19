@@ -61,9 +61,9 @@ class IndexController extends Zend_Controller_Action {
                         
                     } else if ( strcmp($sessionUser->UserType,'DOCTOR') == 0 ) {
                         $this->_helper->redirector('index', 'doctor');
+                    } else {
+                        $this->_helper->redirector('index', 'secretary');
                     }
-
-                    $this->_helper->redirector('index', 'index');
                 } else {
                     echo ' * User doesn\'t exist or wrong password';
                 }
