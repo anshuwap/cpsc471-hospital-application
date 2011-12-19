@@ -16,8 +16,82 @@ class Default_Model_Schedule extends Zend_Db_Table {
                 $this->select()
                     ->where('DateS = ? ' ,$date));
     }
-	
-
+	public function findAllSchedules(){
+		try{
+		return $this->fetchAll(
+                $this->select()
+				->from(array('s' => "schedule"))
+				->join(array('u' => 'user'), 'u.UserId = s.DoctorId', array("DFName" => "FName", "DLName"=>"LName"))
+				->join(array('p' => 'patient'), 'p.PatientId = s.PatientId', array("PFName" => "FName", "PLName"=>"LName"))
+				->join(array('r' => 'room'), 'r.RoomId = s.RoomId', array("Number", "Floor", "RoomType"))
+				->order(array("s.DateS DESC", "s.BeginTime DESC"))
+				->setIntegrityCheck(false));
+		}
+				catch(Exception $e)
+				{
+					return $e->getMessage();
+				}
+	}
+	public function findSchedulesByPatient($fname, $lname)
+	{
+		if ($fname == NULL and $lname == NULL)
+		{
+			return $this->fetchAll(
+                $this->select()
+				->from(array('s' => "schedule"))
+				->join(array('u' => 'user'), 'u.UserId = s.DoctorId', array("DFName" => "FName", "DLName"=>"LName"))
+				->join(array('p' => 'patient'), 'p.PatientId = s.PatientId', array("PFName" => "FName", "PLName"=>"LName"))
+				->join(array('r' => 'room'), 'r.RoomId = s.RoomId', array("Number", "Floor", "RoomType"))
+				->order(array("s.DateS DESC", "s.BeginTime DESC"))
+				->setIntegrityCheck(false));
+		}
+		elseif($fname == NULL)
+        	{
+        		
+        		return $this->fetchAll(
+                $this->select()
+				->from(array('s' => "schedule"))
+				->join(array('u' => 'user'), 'u.UserId = s.DoctorId', array("DFName" => "FName", "DLName"=>"LName"))
+				->join(array('p' => 'patient'), 'p.PatientId = s.PatientId', array("PFName" => "FName", "PLName"=>"LName"))
+				->join(array('r' => 'room'), 'r.RoomId = s.RoomId', array("Number", "Floor", "RoomType"))
+				->where("p.LName = ?", $lname)
+				->order(array("s.DateS DESC", "s.BeginTime DESC"))
+				->setIntegrityCheck(false));
+				
+        	}	  
+		elseif ($lname == NULL) 
+		{
+			return $this->fetchAll(
+                $this->select()
+				->from(array('s' => "schedule"))
+				->join(array('u' => 'user'), 'u.UserId = s.DoctorId', array("DFName" => "FName", "DLName"=>"LName"))
+				->join(array('p' => 'patient'), 'p.PatientId = s.PatientId', array("PFName" => "FName", "PLName"=>"LName"))
+				->join(array('r' => 'room'), 'r.RoomId = s.RoomId', array("Number", "Floor", "RoomType"))
+				->where("p.FName = ?", $fname)
+				->order(array("s.DateS DESC", "s.BeginTime DESC"))
+				->setIntegrityCheck(false));
+		}
+		else {
+			return $this->fetchAll(
+                $this->select()
+				->from(array('s' => "schedule"))
+				->join(array('u' => 'user'), 'u.UserId = s.DoctorId', array("DFName" => "FName", "DLName"=>"LName"))
+				->join(array('p' => 'patient'), 'p.PatientId = s.PatientId', array("PFName" => "FName", "PLName"=>"LName"))
+				->join(array('r' => 'room'), 'r.RoomId = s.RoomId', array("Number", "Floor", "RoomType"))
+				->where("p.FName = ?", $fname)
+				->where("p.LName = ?", $lname)
+				->order(array("s.DateS DESC", "s.BeginTime DESC"))
+				->setIntegrityCheck(false));
+		}
+        
+	}
+	public function deleteSchedule($sid)
+	{
+		
+		$where = $this->getAdapter()->quoteInto('Sid= ?', $sid);
+		$this->delete($where);
+		
+	}
     //Trouve s'il y a une association
     public function Allocation($DoctorId, $PatientId, $DateS, $Hour) {
         return $this->fetchrow(

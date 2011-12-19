@@ -10,6 +10,39 @@ class AppointmentController extends Zend_Controller_Action {
 	public function appointmentAction(){
 		
 	}
+	public function deleteappointmentAction(){
+		$sessionUser = new Zend_Session_Namespace('sessionUser');
+		$s = new Default_Model_Schedule();
+		$sid = $this->_request->getParam('sid');
+		$s->deleteSchedule($sid);
+		$sessionUser->successMessage = "Appointment Deleted Successfully!";
+		$this->_helper->redirector('appointment', 'appointment');
+	}
+	public function searchappointmentAction(){
+		$sessionUser = new Zend_Session_Namespace('sessionUser');
+		
+
+        $patients = new Default_Model_Schedule();
+        $this->view->allschedules = null;
+
+        Zend_Loader::loadClass('FormSearchuser');
+        $form = new FormSearchuser();
+        $this->view->form = $form;
+        if ($this->_request->isPost()) {
+            $formData = $this->_request->getPost();
+            if ($form->isValid($formData)) {
+                $lname = $form->getValue('LName');
+                $fname = $form->getValue('FName');
+			
+                $this->view->allschedules = $patients->findSchedulesByPatient($fname,$lname);
+            }
+        } 
+        else 
+        {
+            $this->view->allschedules = $patients->findAllSchedules();
+        }
+	
+	}
 	public function confirmappointmentAction(){
 		
 		$sessionUser = new Zend_Session_Namespace('sessionUser');
@@ -103,9 +136,6 @@ class AppointmentController extends Zend_Controller_Action {
 		{
 			$this->view->error = $e->getMessage();
 		}
-	}
-	public function searchappointmentAction(){
-		
 	}
 	public function doctorappointmentAction() {    
         $sessionUser = new Zend_Session_Namespace('sessionUser');

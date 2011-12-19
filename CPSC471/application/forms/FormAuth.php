@@ -14,7 +14,7 @@ class FormAuth extends Zend_Form {
         $pwd->setRequired(true);
 
         $submit = new Zend_Form_Element_Submit('submit');
-        $submit->setLabel('Connexion');
+        $submit->setLabel('Sign In');
         $this->addElements(array($login, $pwd, $submit));
         
     }

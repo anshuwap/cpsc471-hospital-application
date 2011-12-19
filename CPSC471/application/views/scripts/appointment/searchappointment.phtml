@@ -1,0 +1,53 @@
+<?php $sessionUser = new Zend_Session_Namespace('sessionUser'); ?>
+<h2>View All Appointments by Date</h2>
+Search by Patient:
+<?php
+    echo $this->form;
+	
+?>
+<script type="text/javascript">
+	function conf(url) {
+	var answer = confirm("Do you want to delete this appointment")
+	if (answer){
+		window.location = url;
+	}
+	
+}
+</script>
+<table>
+    <tr>
+    	<th>Date</th>
+        <th>Begin Time</th>
+        <th>End Time</th>
+        <th>Patient Name</th>
+        <th>Doctor Name</th>
+        <th>Room Floor</th>
+        <th>Room Number</th>
+        <th>Room Type</th>
+        <th>Delete</th>
+
+    </tr>
+    <?php try{
+    	foreach ($this->allschedules as $a) : ?>
+        
+        <tr>
+           <td><?php echo $this->escape($a->DateS); ?> </td>  
+           <td><?php echo $this->escape($a->BeginTime); ?> </td>  
+           <td><?php echo $this->escape($a->EndTime); ?> </td>  
+           <td><?php echo $this->escape($a->PLName); ?> <?php echo $this->escape($a->PFName);?> </td>
+           <td><?php echo $this->escape($a->DLName); ?> <?php echo $this->escape($a->DFName);?> </td>
+           <td><?php echo $this->escape($a->Floor); ?></td>
+           <td><?php echo $this->escape($a->Number); ?></td>
+           <td><?php echo $this->escape($a->RoomType); ?></td>
+           <td><a style="text-decoration:underline; color:black; cursor:pointer;" onclick="<?php echo "conf('" . $this->url(array('controller' => 'appointment',
+                           'action' => 'deleteappointment', 'sid' => $a->Sid)) . "')"; ?>">Delete</a></td>
+   
+
+        </tr>                                        
+    <?php  endforeach; 
+    }
+    catch(Exception $e)
+    {
+    	echo $e->getMessage();
+    }?>
+</table>
